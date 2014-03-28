@@ -31,12 +31,14 @@ import com.google.protobuf.GeneratedMessage;
 /**
  * Receive a heartbeat (HB). This class is used internally by servers to receive
  * HB notices for nodes in its neighborhood list (DAG).
+ * For every node that is connected you will have a Listener
  * 
  * @author gash
  * 
  */
 public class MonitorHandler extends SimpleChannelInboundHandler<eye.Comm.Management> {
-	protected static Logger logger = LoggerFactory.getLogger("mgmt");
+
+    protected static Logger logger = LoggerFactory.getLogger("mgmt-MonitorHandler");
 
 	protected ConcurrentMap<String, MonitorListener> listeners = new ConcurrentHashMap<String, MonitorListener>();
 	private volatile Channel channel;

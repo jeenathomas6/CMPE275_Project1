@@ -51,7 +51,8 @@ import eye.Comm.Network.NetworkAction;
  * 
  */
 public class InboundMgmtWorker extends Thread {
-	protected static Logger logger = LoggerFactory.getLogger("management");
+
+    protected static Logger logger = LoggerFactory.getLogger("management-InboundMgmtWorker");
 
 	int workerId;
 	boolean forever = true;
@@ -74,8 +75,8 @@ public class InboundMgmtWorker extends Thread {
 				// block until a message is enqueued
 				ManagementQueueEntry msg = ManagementQueue.inbound.take();
 
-				if (logger.isDebugEnabled())
-					logger.debug("Inbound management message received");
+				//if (logger.isDebugEnabled())
+					logger.info("Inbound management message received");
 
 				Management req = (Management) msg.req;
 				if (req.hasBeat()) {
@@ -88,14 +89,19 @@ public class InboundMgmtWorker extends Thread {
 					 * Incoming are connections this node establishes, which is
 					 * handled by the HeartbeatConnector.
 					 */
+                    logger.info("Pooja -- Inside req.hasBeat()");
 					HeartbeatManager.getInstance().processRequest(req.getBeat());
 				} else if (req.hasElection()) {
+                    logger.info("Pooja -- Inside req.hasElection()");
 					ElectionManager.getInstance().processRequest(req.getElection());
 				} else if (req.hasGraph()) {
+                    logger.info("Pooja -- Inside req.hasGraph()");
 					NetworkManager.getInstance().processRequest(req.getGraph(), msg.channel, msg.sa);
 				} else if (req.hasJobBid()) {
+                    logger.info("Pooja -- Inside req.hasJobBid()");
 					JobManager.getInstance().processRequest(req.getJobBid());
 				} else if (req.hasJobPropose()) {
+                    logger.info("Pooja -- Inside req.hasJobPropose()");
 					JobManager.getInstance().processRequest(req.getJobPropose());
 				} else
 					logger.error("Unknown management message");

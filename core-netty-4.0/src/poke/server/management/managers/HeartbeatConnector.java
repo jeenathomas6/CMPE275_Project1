@@ -34,12 +34,13 @@ import poke.server.management.managers.HeartbeatData.BeatStatus;
  * 
  */
 public class HeartbeatConnector extends Thread {
-	protected static Logger logger = LoggerFactory.getLogger("management");
+	protected static Logger logger = LoggerFactory.getLogger("management-HeartbeatConnector");
 	protected static AtomicReference<HeartbeatConnector> instance = new AtomicReference<HeartbeatConnector>();
 
 	private ConcurrentLinkedQueue<HeartMonitor> monitors = new ConcurrentLinkedQueue<HeartMonitor>();
 	private int sConnectRate = 2000; // msec
 	private boolean forever = true;
+    private boolean startedElection = false;
 
 	public static HeartbeatConnector getInstance() {
 		instance.compareAndSet(null, new HeartbeatConnector());
@@ -65,7 +66,7 @@ public class HeartbeatConnector extends Thread {
 		// this class will monitor this channel/connection and together with the
 		// manager, we create the circuit breaker pattern to separate
 		// health-status from usage.
-		HeartMonitor hm = new HeartMonitor(node.getNodeId(), node.getHost(), node.getMgmtport());
+		HeartMonitor hm = new HeartMonitor(node.getNodeId(), node.getHost(), node.getMgmtport(), node.getLeaderId());
 		hm.addListener(new HeartbeatListener(node));
 
 		// add monitor to the list of adjacent nodes that we track
@@ -74,6 +75,7 @@ public class HeartbeatConnector extends Thread {
 
 	@Override
 	public void run() {
+        int counter = 0;
 		if (monitors.size() == 0) {
 			logger.info("HB connection monitor not started, no connections to establish");
 			return;
@@ -90,12 +92,19 @@ public class HeartbeatConnector extends Thread {
 						try {
 							logger.info("attempting to connect to node: " + hb.getNodeInfo());
 							hb.startHeartbeat(hb.getNodeInfo());
+                            counter ++;
+                            if(counter > 5 && !startedElection){
+                                logger.info("&************* setting elections");
+                                HeartbeatManager.getInstance().declareElection = true;
+                                startedElection = true;
+                            }
 						} catch (Exception ie) {
 							// do nothing
 							logger.info("Jeena - Exception in HeartbeatConnector run");
 							
 						}
 					}
+
 				}
 			} catch (InterruptedException e) {
 				logger.error("Unexpected HB connector failure", e);

@@ -11,3 +11,12 @@ Client (HeartMonitor) ----> Server (ManagementHandler)
 2) server-server
 
 Server (ManagementHandler + HeartMonitor) ----> Server (ManagementHandler)
+
+
+
+Reference
+**********
+
+1 . When the both the nodes are connected, then the joining node will share its nearest nodes to the exisiting node.
+2. For every HeartMonitor there is a HeartBeatListener added.
+3. In HeartMonitor.js Connect() function will create a function and keep the connection active

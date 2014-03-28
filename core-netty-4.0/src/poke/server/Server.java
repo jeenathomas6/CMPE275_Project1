@@ -136,7 +136,7 @@ logger.info("Inside release");
 
 		public void run() {
 			// construct boss and worker threads (num threads = number of cores)
-logger.info("Inside Server-StartCommuication run");
+            logger.info("Inside Server-StartCommuication run");
 
 			EventLoopGroup bossGroup = new NioEventLoopGroup();
 			EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -266,15 +266,15 @@ logger.info("Inside Server-StartCommuication run");
 
 		// create manager for network changes
 		networkMgr = NetworkManager.getInstance(myId);
-		logger.info("After network manager");
+		//logger.info("After network manager");
 
 		// create manager for leader election
 		String str = conf.getServer().getProperty("node.votes");
 		int votes = 1;
 		if (str != null)
 			votes = Integer.parseInt(str);
-		electionMgr = ElectionManager.getInstance(myId, votes);
-		
+		electionMgr = ElectionManager.getInstance(myId, votes, conf);
+
 		//--Jeena
 		
 		electionReq = ElectionRequest.getInstance(conf);
@@ -299,13 +299,19 @@ logger.info("Inside Server-StartCommuication run");
 		
 		//--Jeena
 
+
 		// create manager for accepting jobs
 		jobMgr = JobManager.getInstance(myId);
 
 		// establish nearest nodes and start receiving heartbeats
 		heartbeatMgr = HeartbeatManager.getInstance(myId);
 		for (NodeDesc nn : conf.getNearest().getNearestNodes().values()) {
-			HeartbeatData node = new HeartbeatData(nn.getNodeId(), nn.getHost(), nn.getPort(), nn.getMgmtPort());
+            String leaderId = nn.getLeaderId();
+            if(leaderId == null)
+                leaderId = "one";// TODO - Pooja added have to request for the new leader from the nearest node which that assumes.
+
+			HeartbeatData node = new HeartbeatData(nn.getNodeId(), nn.getHost(), nn.getPort(), nn.getMgmtPort(),nn.getLeaderId());
+            //node will have the values of the nearest node details like zero will have one s details
 			HeartbeatConnector.getInstance().addConnectToThisNode(node);
 		}
 		heartbeatMgr.start();

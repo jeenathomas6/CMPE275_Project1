@@ -17,11 +17,15 @@ package poke.server.management.managers;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+import com.google.protobuf.GeneratedMessage;
+import eye.Comm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eye.Comm.LeaderElection;
 import eye.Comm.LeaderElection.VoteAction;
+import poke.resources.ForwardResource;
+import poke.server.conf.ServerConf;
 
 /**
  * The election manager is used to determine leadership within the network.
@@ -29,17 +33,17 @@ import eye.Comm.LeaderElection.VoteAction;
  * @author gash
  * 
  */
-public class ElectionManager {
+public class ElectionManager extends Thread{
 	protected static Logger logger = LoggerFactory.getLogger("management");
 	protected static AtomicReference<ElectionManager> instance = new AtomicReference<ElectionManager>();
-
+    ServerConf conf;
 	private String nodeId;
 
 	/** @brief the number of votes this server can cast */
 	private int votes = 1;
 
-	public static ElectionManager getInstance(String id, int votes) {
-		instance.compareAndSet(null, new ElectionManager(id, votes));
+	public static ElectionManager getInstance(String id, int votes,ServerConf conf) {
+		instance.compareAndSet(null, new ElectionManager(id, votes,conf));
 		return instance.get();
 	}
 
@@ -53,14 +57,14 @@ public class ElectionManager {
 	 * @param nodeId
 	 *            The server's (this) ID
 	 */
-	public ElectionManager(String nodeId, int votes) {
+	public ElectionManager(String nodeId, int votes, ServerConf conf) {
 		this.nodeId = nodeId;
-
+        this.conf = conf;
 		if (votes >= 0)
 			this.votes = votes;
 	}
 
-	/**
+	/*
 	 * @param args
 	 */
 	public void processRequest(LeaderElection req) {
@@ -74,7 +78,6 @@ public class ElectionManager {
 				return;
 			}
 		}
-
 		if (req.getVote().getNumber() == VoteAction.ELECTION_VALUE) {
 			logger.info("I am hereeeeee");
 			logger.info("Election declared by "+req.getNodeId());
@@ -82,12 +85,14 @@ public class ElectionManager {
 		} else if (req.getVote().getNumber() == VoteAction.DECLAREVOID_VALUE) {
 			// no one was elected, I am dropping into standby mode`
 		} else if (req.getVote().getNumber() == VoteAction.DECLAREWINNER_VALUE) {
-			// some node declared themself the leader
+            String val = req.getNodeId();
+            logger.info("Inside Winner" + val);
+
 		} else if (req.getVote().getNumber() == VoteAction.ABSTAIN_VALUE) {
 			// for some reason, I decline to vote
 		} else if (req.getVote().getNumber() == VoteAction.NOMINATE_VALUE) {
 			logger.info("Inside Nominate");
-			logger.info("My value: "+nodeId);
+			logger.info("My value: "+ nodeId);
 			logger.info("Request node id : "+req.getNodeId());
 			int comparedToMe = req.getNodeId().compareTo(nodeId);
 			logger.info("value of compared "+comparedToMe);
@@ -99,7 +104,38 @@ public class ElectionManager {
 				// I have a higher priority, nominate myself
 				// TODO nominate myself
 				logger.info("I have higher priority");
-			}
+                try{
+                LeaderElection.Builder leaderBuilder = LeaderElection.newBuilder();
+                leaderBuilder.setVote(VoteAction.DECLAREWINNER);
+                leaderBuilder.setBallotId("five");
+                leaderBuilder.setDesc("I am desc from nominate");
+                leaderBuilder.setNodeId(nodeId);
+
+                Comm.Management.Builder builder = Comm.Management.newBuilder();
+                builder.setElection(leaderBuilder.build());
+
+                for (HeartbeatData hd : HeartbeatManager.getInstance().outgoingHB.values()) {
+                    if (hd.getFailuresOnSend() > HeartbeatData.sFailureToSendThresholdDefault)
+                        continue;
+
+
+                    GeneratedMessage msg = builder.build();
+
+                    try {
+                        logger.info("sending nominate value " + hd.getNodeId()+ " at" + hd.getPort()+ " and the node id is " + nodeId);
+                        hd.channel.writeAndFlush(msg);
+
+                    } catch (Exception e) {
+                        hd.incrementFailuresOnSend();
+                    }
+                }
+                }
+                catch (Exception e)
+                {
+                    logger.info("exception" + e);
+                }
+
+            }
 		}
 	}
 }

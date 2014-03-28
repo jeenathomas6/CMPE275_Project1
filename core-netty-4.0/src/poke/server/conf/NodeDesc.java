@@ -11,8 +11,13 @@ public class NodeDesc {
 	private String host;
 	private int port;
 	private int mgmtPort;
+    private String leaderId;
 
-	public String getHost() {
+    public String getLeaderId() { return leaderId; }
+
+    public void setLeaderId(String leaderId) { this.leaderId = leaderId; }
+
+    public String getHost() {
 		return host;
 	}
 

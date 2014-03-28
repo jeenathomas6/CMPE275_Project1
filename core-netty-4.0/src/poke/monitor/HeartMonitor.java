@@ -58,7 +58,7 @@ import eye.Comm.Network.NetworkAction;
  * 
  */
 public class HeartMonitor {
-	protected static Logger logger = LoggerFactory.getLogger("mgmt");
+	protected static Logger logger = LoggerFactory.getLogger("mgmt-HeartMonitor");
 
 	protected ChannelFuture channel; // do not use directly, call connect()!
 	private EventLoopGroup group;
@@ -67,6 +67,7 @@ public class HeartMonitor {
 	private String whoami;
 	private String host;
 	private int port;
+    private String leaderNode;
 	private static int i=0;
 
 	// this list is only used if the connection cannot be established - it holds
@@ -83,11 +84,12 @@ public class HeartMonitor {
 	 * @param port
 	 *            This is the management port
 	 */
-	public HeartMonitor(String whoami, String host, int port) {
+	public HeartMonitor(String whoami, String host, int port, String leaderId) {
 		this.whoami = whoami;
 		this.host = host;
 		this.port = port;
-		this.group = new NioEventLoopGroup();
+        this.leaderNode = host;
+        this.group = new NioEventLoopGroup();
 	}
 
 	public MonitorHandler getHandler() {
@@ -131,7 +133,7 @@ public class HeartMonitor {
 
 	/**
 	 * create connection to remote server
-	 * 
+	 * Ref 3
 	 * @return
 	 */
 	protected Channel connect() 
@@ -181,9 +183,14 @@ public class HeartMonitor {
 				
 		}
 
+
 		if (channel != null && channel.isDone() && channel.isSuccess())
 			return channel.channel();
-		else
+		else if(channel != null){
+            logger.info("Channel is not null");
+            return channel.channel();
+        }
+        else
 			throw new RuntimeException("Not able to establish connection to server");
 	}
 
@@ -212,48 +219,29 @@ public class HeartMonitor {
 
 		boolean rtn = false;
 		try {
-			Channel ch = connect();
 
-			logger.info("sending mgmt join message");
-			Network.Builder n = Network.newBuilder();
+            Channel ch = connect();
+
+			logger.info("sending mgmt join message with " + whoami);
+            Network.Builder n = Network.newBuilder();
 			n.setNodeId("mgmt-" + whoami + "." + N);
 			n.setAction(NetworkAction.NODEJOIN);
+
 			Management.Builder m = Management.newBuilder();
 			m.setGraph(n.build());
 			ch.writeAndFlush(m.build());
-			
-			
-			
+
 			rtn = true;
 			logger.info("join message sent");
+
 		} catch (Exception e) {
-			i=i+1;
-			logger.info("Jeena - Could not send join message");
-			if(i==3)
-			{
-				logger.info("Jeena - Tried sending 3 times!");
-				logger.info("Starting election");
-				ElectionRequest er=ElectionRequest.getInstance();
-				GeneratedMessage msg= er.generateLEReq(hbInfo);
-				logger.info("Generated msg is "+msg);
-				HeartbeatManager hm= HeartbeatManager.getInstance();
-				for (HeartbeatData hd : hm.outgoingHB.values())
-				{
-					if(hd.channel==null)
-					{
-						logger.info("Channel is null! Jeena");
-					}
-					hd.channel.writeAndFlush(msg);
-					hd.setLastBeatSent(System.currentTimeMillis());
-					hd.setFailuresOnSend(0);
-				}
-				
-			}
-			// logger.error("could not send connect to node", e);
+            logger.info("error in sending join message");
 		}
 
 		return rtn;
 	}
+
+
 
 	public String getHost() {
 		return host;
@@ -314,13 +302,16 @@ public class HeartMonitor {
 	 */
 	public static class MonitorClosedListener implements ChannelFutureListener {
 		private HeartMonitor monitor;
+        protected static Logger logger = LoggerFactory.getLogger("mgmt");
 
-		public MonitorClosedListener(HeartMonitor monitor) {
+        public MonitorClosedListener(HeartMonitor monitor) {
+            logger.info("MonitorClosedListener init");
 			this.monitor = monitor;
 		}
 
 		@Override
 		public void operationComplete(ChannelFuture future) throws Exception {
+            logger.info("MonitorClosedListener closing");
 			monitor.release();
 		}
 	}

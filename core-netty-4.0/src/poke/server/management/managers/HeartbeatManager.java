@@ -49,7 +49,8 @@ import eye.Comm.Management;
  * 
  */
 public class HeartbeatManager extends Thread {
-	protected static Logger logger = LoggerFactory.getLogger("management");
+
+    protected static Logger logger = LoggerFactory.getLogger("management-HeartBeatManager");
 	protected static AtomicReference<HeartbeatManager> instance = new AtomicReference<HeartbeatManager>();
 
 	// frequency that heartbeats are checked
@@ -58,6 +59,7 @@ public class HeartbeatManager extends Thread {
 	String nodeId;
 	ManagementQueue mqueue;
 	boolean forever = true;
+    boolean declareElection = false;
 
 	public ConcurrentHashMap<Channel, HeartbeatData> outgoingHB = new ConcurrentHashMap<Channel, HeartbeatData>();
 	ConcurrentHashMap<String, HeartbeatData> incomingHB = new ConcurrentHashMap<String, HeartbeatData>();
@@ -73,13 +75,11 @@ public class HeartbeatManager extends Thread {
 
 	/**
 	 * initialize the heartbeatMgr for this server
-	 * 
-	 * @param nodeId
-	 *            The server's (this) ID
+	 * @param nodeId   The server's (this) ID
 	 */
 	protected HeartbeatManager(String nodeId) {
 		this.nodeId = nodeId;
-		// outgoingHB = new DefaultChannelGroup();
+		//outgoingHB = new DefaultChannelGroup();
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class HeartbeatManager extends Thread {
 	/**
 	 * update information on a node we monitor
 	 * 
-	 * @param nodeId
+	 * @param req
 	 */
 	public void processRequest(Heartbeat req) {
 		if (req == null)
@@ -119,9 +119,10 @@ public class HeartbeatManager extends Thread {
 	 * @param ch
 	 * @param sa
 	 */
-	public void addOutgoingChannel(String nodeId, String host, int mgmtport, Channel ch, SocketAddress sa) {
-		if (!outgoingHB.containsKey(ch)) {
-			HeartbeatData heart = new HeartbeatData(nodeId, host, null, mgmtport);
+	public void addOutgoingChannel(String nodeId, String host, int mgmtport, Channel ch, SocketAddress sa, String leaderId) {
+        logger.info("at addOutgoingChannel with :" + nodeId + ":"+ host + ":" + mgmtport+":"+ ch.toString()+ ":"+ sa.toString());
+        if (!outgoingHB.containsKey(ch)) {
+			HeartbeatData heart = new HeartbeatData(nodeId, host, null, mgmtport, leaderId);
 			heart.setConnection(ch, sa);
 			outgoingHB.put(ch, heart);
 
@@ -130,6 +131,11 @@ public class HeartbeatManager extends Thread {
 		} else {
 			logger.error("Received a HB connection unknown to the server, node ID = ", nodeId);
 			// TODO actions?
+            //-- Pooja
+            HeartbeatData heart = new HeartbeatData(nodeId, host, null, mgmtport, leaderId);
+            heart.setConnection(ch, sa);
+            outgoingHB.put(ch, heart);
+            //--pooja
 		}
 	}
 
@@ -198,12 +204,13 @@ public class HeartbeatManager extends Thread {
 		return b.build();
 	}
 	
-	private Management generateHBTest() {
-		LeaderElection.Builder l=LeaderElection.newBuilder();
-		l.setNodeId("zero");
+	private Management generateElectionMsg() {
+
+        LeaderElection.Builder l=LeaderElection.newBuilder();
+		l.setNodeId(nodeId);
 		l.setBallotId("five");
-		l.setVote(VoteAction.ELECTION);
-		l.setDesc("This is a trial election by Jeena");
+		l.setVote(VoteAction.NOMINATE);
+		l.setDesc("This is a trial election by Pooja");
 		
 		Management.Builder m=Management.newBuilder();
 		m.setElection(l.build());
@@ -222,33 +229,58 @@ public class HeartbeatManager extends Thread {
 				// ignore until we have edges with other nodes
 				if (outgoingHB.size() > 0) {
 					// TODO verify known node's status
-
 					// send my status (heartbeatMgr)
-					GeneratedMessage msg = null;
-					for (HeartbeatData hd : outgoingHB.values()) {
-						// if failed sends exceed threshold, stop sending
+
+
+                        GeneratedMessage msg = null;
+
+                        for (HeartbeatData hd : outgoingHB.values()) {
+                            // if failed sends exceed threshold, stop sending
+                            if (hd.getFailuresOnSend() > HeartbeatData.sFailureToSendThresholdDefault)
+                                continue;
+
+                            // only generate the message if needed
+                            if (msg == null)
+                                msg = generateHB();
+
+                            try {
+                                logger.info("sending heartbeat to " + hd.getNodeId()+ " at" + hd.getPort()+ " and the node id is " + nodeId);
+                                hd.channel.writeAndFlush(msg);
+                                hd.setLastBeatSent(System.currentTimeMillis());
+                                hd.setFailuresOnSend(0);
+                                if (logger.isDebugEnabled())
+                                    logger.debug("beat (" + nodeId + ") sent to " + hd.getNodeId() + " at " + hd.getHost());
+                            } catch (Exception e) {
+                                hd.incrementFailuresOnSend();
+                                logger.error("Failed " + hd.getFailures() + " times to send HB for " + hd.getNodeId()
+                                        + " at " + hd.getHost(), e);
+                            }
+                        }
+
+                    if(declareElection){
+
+                    msg = null;
+                    for (HeartbeatData hd : outgoingHB.values()) {
 						if (hd.getFailuresOnSend() > HeartbeatData.sFailureToSendThresholdDefault)
 							continue;
 
-						// only generate the message if needed
 						if (msg == null)
-							msg = generateHB();
+							msg = generateElectionMsg();
 
 						try {
-							logger.info("sending heartbeat");
+							logger.info("sending election to " + hd.getNodeId()+ " at" + hd.getPort()+ " and the node id is " + nodeId);
 							hd.channel.writeAndFlush(msg);
-							//hd.channel.write("Hi My name is Jeena");
-							hd.setLastBeatSent(System.currentTimeMillis());
-							hd.setFailuresOnSend(0);
-							if (logger.isDebugEnabled())
-								logger.debug("beat (" + nodeId + ") sent to " + hd.getNodeId() + " at " + hd.getHost());
+
 						} catch (Exception e) {
 							hd.incrementFailuresOnSend();
 							logger.error("Failed " + hd.getFailures() + " times to send HB for " + hd.getNodeId()
 									+ " at " + hd.getHost(), e);
 						}
 					}
-				} else
+                    declareElection = false;
+                }
+
+			} else
 					; // logger.info("No nodes to send HB");
 			} catch (InterruptedException ie) {
 				break;

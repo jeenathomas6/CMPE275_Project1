@@ -15,6 +15,7 @@
  */
 package poke.server.management.managers;
 
+import eye.Comm;
 import io.netty.channel.Channel;
 
 import java.net.SocketAddress;
@@ -51,6 +52,8 @@ public class HeartbeatData {
 	private String host;
 	private Integer port;
 	private Integer mgmtport;
+    private String leaderId;
+    private HeartbeatData nearestNode; // --Pooja to keep track of the nearest node. Ref # 1
 	private BeatStatus status = BeatStatus.Unknown;
 	private int beatInterval = sBeatIntervalDefault;
 	private int weakTheshold = sWeakThresholdDefault;
@@ -66,11 +69,13 @@ public class HeartbeatData {
 	public SocketAddress sa;
 	public Channel channel;
 
-	public HeartbeatData(String nodeId, String host, Integer port, Integer mgmtport) {
+	public HeartbeatData(String nodeId, String host, Integer port, Integer mgmtport, String leaderId) {
 		this.nodeId = nodeId;
 		this.host = host;
 		this.port = port;
 		this.mgmtport = mgmtport;
+        this.nearestNode = null;
+        this.leaderId = leaderId;
 	}
 
 	public Channel getChannel() {
@@ -283,4 +288,11 @@ public class HeartbeatData {
 	public enum BeatStatus {
 		Unknown, Init, Active, Weak, Failed
 	}
+    //-Pooja
+    public void setNearestNode(HeartbeatData node) {
+        this.nearestNode = node;
+    }
+    public String getLeaderId() { return leaderId; }
+    public void setLeaderId(String leaderId) { this.leaderId = leaderId; }
+    //-Pooja
 }

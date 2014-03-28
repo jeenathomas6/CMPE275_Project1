@@ -21,7 +21,8 @@ import org.slf4j.LoggerFactory;
 import poke.monitor.MonitorListener;
 
 public class HeartbeatListener implements MonitorListener {
-	protected static Logger logger = LoggerFactory.getLogger("management");
+
+    protected static Logger logger = LoggerFactory.getLogger("management-HeartbeatListener");
 
 	private HeartbeatData data;
 
@@ -63,7 +64,7 @@ public class HeartbeatListener implements MonitorListener {
 			logger.info("Received HB response from " + msg.getBeat().getNodeId());
 			data.setLastBeat(System.currentTimeMillis());
 		} else
-			logger.error("Received heartbeatMgr from on wrong channel or unknown host: " + msg.getBeat().getNodeId());
+			logger.error("Received heartbeatMgr from an wrong channel or unknown host: " + msg.getBeat().getNodeId());
 		if(msg.hasElection())
 		{
 			logger.info("Recieved election response from "+msg.getElection().getNodeId());

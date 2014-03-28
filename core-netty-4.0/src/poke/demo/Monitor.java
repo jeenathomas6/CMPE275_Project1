@@ -29,14 +29,16 @@ import eye.Comm.Management;
  * 
  */
 public class Monitor {
-	protected static Logger logger = LoggerFactory.getLogger("client");
+
+    protected static Logger logger = LoggerFactory.getLogger("client");
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		String host = "localhost";
-		int mport = 5670;
+		int mport = 5671;
+        String leaderId = "one";
 
 		if (args.length == 2) {
 			try {
@@ -48,7 +50,7 @@ public class Monitor {
 		}
 
 		logger.info("trying to connect monitor to " + host + ":" + mport);
-		HeartMonitor hm = new HeartMonitor("app", host, mport);
+		HeartMonitor hm = new HeartMonitor("app", host, mport, leaderId);
 		hm.addListener(new HeartPrintListener(null));
 		hm.waitForever();
 	}

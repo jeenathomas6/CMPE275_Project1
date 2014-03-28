@@ -34,7 +34,7 @@ import eye.Comm.Network.NetworkAction;
  * 
  */
 public class NetworkManager {
-	protected static Logger logger = LoggerFactory.getLogger("management");
+	protected static Logger logger = LoggerFactory.getLogger("management-NetworkManager");
 	protected static AtomicReference<NetworkManager> instance = new AtomicReference<NetworkManager>();
 
 	private String nodeId;
@@ -62,7 +62,7 @@ public class NetworkManager {
 	}
 
 	/**
-	 * @param args
+	 *
 	 */
 	public void processRequest(Network req, Channel channel, SocketAddress sa) {
 		if (req == null || channel == null || sa == null)
@@ -76,14 +76,16 @@ public class NetworkManager {
 		 * send a heartbeatMgr
 		 */
 		if (req.getAction().getNumber() == NetworkAction.NODEJOIN_VALUE) {
+
 			if (channel.isOpen()) {
 				// can i cast socka?
 				SocketAddress socka = channel.localAddress();
 				if (socka != null) {
 					InetSocketAddress isa = (InetSocketAddress) socka;
-					logger.info("NODEJOIN: " + isa.getHostName() + ", " + isa.getPort());
+					logger.info("Inside the Network ProcessRequest NODEJOIN: " + isa.getHostName() + ", " + isa.getPort());
+                    logger.info("Pooja--- req.getnodeid: " + req.getNodeId() + " : " + isa.getHostName() + " : " + isa.getPort());
 					HeartbeatManager.getInstance().addOutgoingChannel(req.getNodeId(), isa.getHostName(),
-							isa.getPort(), channel, sa);
+							isa.getPort(), channel, sa, null);
 				}
 			} else
 				logger.warn(req.getNodeId() + " not writable");
