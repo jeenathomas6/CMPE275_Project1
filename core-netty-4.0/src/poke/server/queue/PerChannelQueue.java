@@ -65,6 +65,7 @@ public class PerChannelQueue implements ChannelQueue {
 	private ThreadGroup tgroup = new ThreadGroup("ServerQueue-" + System.nanoTime());
 
 	protected PerChannelQueue(Channel channel) {
+        logger.info("I m in the PerchabbelQueu");
 		this.channel = channel;
 		init();
 	}
@@ -86,6 +87,12 @@ public class PerChannelQueue implements ChannelQueue {
 
 	protected Channel getChannel() {
 		return channel;
+	}
+	
+	@Override
+	public LinkedBlockingDeque<com.google.protobuf.GeneratedMessage> getInboundQueue()
+	{
+		return this.inbound;
 	}
 
 	/*
@@ -128,6 +135,7 @@ public class PerChannelQueue implements ChannelQueue {
 	 */
 	@Override
 	public void enqueueRequest(Request req, Channel notused) {
+        logger.info("Im in PerchannelQueue");
 		try {
 			inbound.put(req);
 		} catch (InterruptedException e) {
@@ -142,6 +150,7 @@ public class PerChannelQueue implements ChannelQueue {
 	 */
 	@Override
 	public void enqueueResponse(Request reply, Channel notused) {
+        logger.info("Im in PerchannelQueue");
 		if (reply == null)
 			return;
 
@@ -181,6 +190,7 @@ public class PerChannelQueue implements ChannelQueue {
 				try {
 					// block until a message is enqueued
 					GeneratedMessage msg = sq.outbound.take();
+                    logger.info("Im in Perchannel Queue");
 					if (conn.isWritable()) {
 						boolean rtn = false;
 						if (channel != null && channel.isOpen() && channel.isWritable()) {
@@ -238,7 +248,7 @@ public class PerChannelQueue implements ChannelQueue {
 				try {
 					// block until a message is enqueued
 					GeneratedMessage msg = sq.inbound.take();
-
+                    logger.info("Im in PerchannelQueue");
 					// process request and enqueue response
 					if (msg instanceof Request) {
 						Request req = ((Request) msg);

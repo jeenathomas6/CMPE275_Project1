@@ -93,7 +93,7 @@ public class InboundMgmtWorker extends Thread {
 					HeartbeatManager.getInstance().processRequest(req.getBeat());
 				} else if (req.hasElection()) {
                     logger.info("Pooja -- Inside req.hasElection()");
-					ElectionManager.getInstance().processRequest(req.getElection());
+					ElectionManager.getInstance().processRequest(req, req.getElection());
 				} else if (req.hasGraph()) {
                     logger.info("Pooja -- Inside req.hasGraph()");
 					NetworkManager.getInstance().processRequest(req.getGraph(), msg.channel, msg.sa);

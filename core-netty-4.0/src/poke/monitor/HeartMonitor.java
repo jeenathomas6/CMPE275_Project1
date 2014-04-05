@@ -35,10 +35,7 @@ import org.slf4j.LoggerFactory;
 import com.google.protobuf.GeneratedMessage;
 
 import poke.server.conf.ServerConf;
-import poke.server.management.managers.ElectionManager;
-import poke.server.management.managers.ElectionRequest;
-import poke.server.management.managers.HeartbeatData;
-import poke.server.management.managers.HeartbeatManager;
+import poke.server.management.managers.*;
 import eye.Comm.LeaderElection;
 import eye.Comm.Management;
 import eye.Comm.Network;
@@ -95,6 +92,8 @@ public class HeartMonitor {
 	public MonitorHandler getHandler() {
 		return handler;
 	}
+
+    public String getPortId(){ return whoami;}
 
 	/**
 	 * abstraction of notification in the communication
@@ -160,6 +159,8 @@ public class HeartMonitor {
 					channel = b.connect(host, port).syncUninterruptibly();
 					channel.awaitUninterruptibly(5000l);
 					channel.channel().closeFuture().addListener(new MonitorClosedListener(HeartMonitor.this));
+
+                ServerManager.getInstance(whoami).addAdjacentNodeChannel(host,port,channel.channel());
 
 				if (N == Integer.MAX_VALUE)
 					N = 1;
@@ -233,6 +234,8 @@ public class HeartMonitor {
 
 			rtn = true;
 			logger.info("join message sent");
+
+
 
 		} catch (Exception e) {
             logger.info("error in sending join message");

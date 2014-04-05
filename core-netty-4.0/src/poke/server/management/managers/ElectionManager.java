@@ -21,11 +21,17 @@ import com.google.protobuf.GeneratedMessage;
 import eye.Comm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 import eye.Comm.LeaderElection;
 import eye.Comm.LeaderElection.VoteAction;
 import poke.resources.ForwardResource;
+import poke.server.Util.CommanUtils;
 import poke.server.conf.ServerConf;
+
 
 /**
  * The election manager is used to determine leadership within the network.
@@ -38,6 +44,8 @@ public class ElectionManager extends Thread{
 	protected static AtomicReference<ElectionManager> instance = new AtomicReference<ElectionManager>();
     ServerConf conf;
 	private String nodeId;
+    private int counter = 0;
+
 
 	/** @brief the number of votes this server can cast */
 	private int votes = 1;
@@ -60,6 +68,7 @@ public class ElectionManager extends Thread{
 	public ElectionManager(String nodeId, int votes, ServerConf conf) {
 		this.nodeId = nodeId;
         this.conf = conf;
+
 		if (votes >= 0)
 			this.votes = votes;
 	}
@@ -67,9 +76,11 @@ public class ElectionManager extends Thread{
 	/*
 	 * @param args
 	 */
-	public void processRequest(LeaderElection req) {
+	public void processRequest(Comm.Management recMsgs, LeaderElection req) {
 		if (req == null)
 			return;
+
+        if(counter >3)return;
 
 		if (req.hasExpires()) {
 			long ct = System.currentTimeMillis();
@@ -82,60 +93,122 @@ public class ElectionManager extends Thread{
 			logger.info("I am hereeeeee");
 			logger.info("Election declared by "+req.getNodeId());
 			// an election is declared!
-		} else if (req.getVote().getNumber() == VoteAction.DECLAREVOID_VALUE) {
+		}
+        else if (req.getVote().getNumber() == VoteAction.DECLAREVOID_VALUE) {
 			// no one was elected, I am dropping into standby mode`
-		} else if (req.getVote().getNumber() == VoteAction.DECLAREWINNER_VALUE) {
+		}
+        else if (req.getVote().getNumber() == VoteAction.DECLAREWINNER_VALUE) {
+
+            counter++;
             String val = req.getNodeId();
-            logger.info("Inside Winner" + val);
+            logger.info("Inside Winner --->" + val);
+            boolean sent = nominateWinner(val, nodeId);
 
 		} else if (req.getVote().getNumber() == VoteAction.ABSTAIN_VALUE) {
 			// for some reason, I decline to vote
-		} else if (req.getVote().getNumber() == VoteAction.NOMINATE_VALUE) {
+		}
+        else if (req.getVote().getNumber() == VoteAction.NOMINATE_VALUE) {
 			logger.info("Inside Nominate");
 			logger.info("My value: "+ nodeId);
 			logger.info("Request node id : "+req.getNodeId());
-			int comparedToMe = req.getNodeId().compareTo(nodeId);
+            int comparedToMe = CommanUtils.compareNodeId(nodeId,req.getNodeId());
+			//int comparedToMe = req.getNodeId().compareTo(nodeId);
 			logger.info("value of compared "+comparedToMe);
-			if (comparedToMe > 0) {
-				logger.info("Request node Id is greater");
-				// Someone else has a higher priority, forward nomination
-				// TODO forward
-			} else if (comparedToMe < 0 ) {
-				// I have a higher priority, nominate myself
-				// TODO nominate myself
-				logger.info("I have higher priority");
-                try{
-                LeaderElection.Builder leaderBuilder = LeaderElection.newBuilder();
-                leaderBuilder.setVote(VoteAction.DECLAREWINNER);
-                leaderBuilder.setBallotId("five");
-                leaderBuilder.setDesc("I am desc from nominate");
-                leaderBuilder.setNodeId(nodeId);
 
-                Comm.Management.Builder builder = Comm.Management.newBuilder();
-                builder.setElection(leaderBuilder.build());
-
-                for (HeartbeatData hd : HeartbeatManager.getInstance().outgoingHB.values()) {
-                    if (hd.getFailuresOnSend() > HeartbeatData.sFailureToSendThresholdDefault)
-                        continue;
-
-
-                    GeneratedMessage msg = builder.build();
-
-                    try {
-                        logger.info("sending nominate value " + hd.getNodeId()+ " at" + hd.getPort()+ " and the node id is " + nodeId);
-                        hd.channel.writeAndFlush(msg);
-
-                    } catch (Exception e) {
-                        hd.incrementFailuresOnSend();
-                    }
-                }
-                }
-                catch (Exception e)
-                {
-                    logger.info("exception" + e);
-                }
-
+            if (comparedToMe > 0) {
+                logger.info("value of compared "+comparedToMe);
+				forwardElection(req.getNodeId(), nodeId);
+			}else if (comparedToMe <=  0 ) {
+                forwardElection(nodeId, nodeId);
             }
 		}
 	}
+
+    public static void forwardElection(String electedNode, String nodeId){
+        boolean sent = false;
+        logger.info("Elected node is :"+electedNode);
+        try{
+            LeaderElection.Builder leaderBuilder = LeaderElection.newBuilder();
+            leaderBuilder.setVote(VoteAction.NOMINATE);
+            leaderBuilder.setBallotId("five");
+            leaderBuilder.setDesc("I am desc from nominate");
+            leaderBuilder.setNodeId(electedNode);
+
+            Comm.Management.Builder builder = Comm.Management.newBuilder();
+            builder.setElection(leaderBuilder.build());
+
+            GeneratedMessage msg = builder.build();
+
+            for (HeartbeatData hd : HeartbeatManager.getInstance().outgoingHB.values()) {
+                if(!hd.channel.isOpen()){
+                    nominateWinner(electedNode, nodeId);
+                    sent = false;
+                    break;
+                }
+                sent = true;
+                if (hd.getFailuresOnSend() > HeartbeatData.sFailureToSendThresholdDefault)
+                    continue;
+
+                try {
+                    logger.info("Sending election msg:" + msg);
+                    logger.info("sending nominate value " + hd.getNodeId()+ " at" + hd.getPort()+ " and the node id is " + nodeId);
+                    hd.channel.writeAndFlush(msg);
+
+                } catch (Exception e) {
+                    hd.incrementFailuresOnSend();
+                }
+            }
+            if(!sent){
+                nominateWinner(electedNode,nodeId);
+            }
+
+            /*for (String hd : ServerManager.getInstance(nodeId).incomingHB.keySet()) {
+                try{
+                    logger.info("the value of the channel is "+ ServerManager.getInstance(nodeId).incomingHB.get(hd));
+                    ServerManager.getInstance(nodeId).incomingHB.get(hd).writeAndFlush(msg);
+                }
+                catch (Exception e){
+                    logger.info("exception at servermanager sending elections" + e);
+                }
+            }*/
+        }
+        catch (Exception e)
+        {
+            logger.info("exception in sending the election " + e);
+        }
+    }
+
+    public static boolean nominateWinner(String winnerNode, String nodeId){
+        logger.info("<-------------------------NominateWinner----> :"+ winnerNode);
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("src/leader.txt"));
+            out.write("Leader:" + winnerNode);
+            out.close();
+        } catch (IOException e) {}
+
+        LeaderElection.Builder leaderBuilder = LeaderElection.newBuilder();
+        leaderBuilder.setVote(VoteAction.DECLAREWINNER);
+        leaderBuilder.setBallotId("five");
+        leaderBuilder.setDesc("I am desc from nominate");
+        leaderBuilder.setNodeId(winnerNode);
+
+        Comm.Management.Builder builder = Comm.Management.newBuilder();
+        builder.setElection(leaderBuilder.build());
+
+        GeneratedMessage msg = builder.build();
+
+        for (String hd : ServerManager.getInstance(nodeId).incomingHB.keySet()) {
+            if(!ServerManager.getInstance(nodeId).incomingHB.get(hd).isOpen())
+                return false;
+            try{
+                logger.info("the value of the channel is "+ ServerManager.getInstance(nodeId).incomingHB.get(hd));
+                ServerManager.getInstance(nodeId).incomingHB.get(hd).writeAndFlush(msg);
+            }
+            catch (Exception e){
+                logger.info("exception at servermanager sending elections" + e);
+            }
+
+    }
+        return true;
+   }
 }

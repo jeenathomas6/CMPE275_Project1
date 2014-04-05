@@ -18,8 +18,12 @@ package poke.server.management.managers;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicReference;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import poke.monitor.HeartMonitor;
 import poke.monitor.MonitorHandler;
@@ -41,6 +45,7 @@ public class HeartbeatConnector extends Thread {
 	private int sConnectRate = 2000; // msec
 	private boolean forever = true;
     private boolean startedElection = false;
+    String[] leader;
 
 	public static HeartbeatConnector getInstance() {
 		instance.compareAndSet(null, new HeartbeatConnector());
@@ -90,13 +95,28 @@ public class HeartbeatConnector extends Thread {
 				for (HeartMonitor hb : monitors) {
 					if (!hb.isConnected()) {
 						try {
-							logger.info("attempting to connect to node: " + hb.getNodeInfo());
+							logger.info("attempting to connect to node: " + hb.getNodeInfo() );
 							hb.startHeartbeat(hb.getNodeInfo());
                             counter ++;
-                            if(counter > 5 && !startedElection){
-                                logger.info("&************* setting elections");
-                                HeartbeatManager.getInstance().declareElection = true;
-                                startedElection = true;
+                            if(counter > 5){
+                                try {
+                                    String sCurrentLine;
+                                    BufferedReader br = new BufferedReader(new FileReader("src/leader.txt"));
+                                    while ((sCurrentLine = br.readLine()) != null) {
+                                        System.out.println(sCurrentLine);
+                                        logger.info("kal leader : " + sCurrentLine);
+                                        leader = sCurrentLine.split(":");
+                                    }
+                                } catch (IOException ioe) {
+                                    ioe.printStackTrace();
+                                }
+
+                                logger.info("The node and leader == >" + leader[1] + "==>" + hb.getPortId());
+                                if( !startedElection && hb.getPortId().equals(leader[1])){
+                                    logger.info("<-----------------Starting elections------------------>");
+                                    HeartbeatManager.getInstance().declareElection = true;
+                                    startedElection = true;//TODO reset the startedElection value and declare election
+                                }
                             }
 						} catch (Exception ie) {
 							// do nothing

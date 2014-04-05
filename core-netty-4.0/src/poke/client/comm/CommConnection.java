@@ -29,8 +29,16 @@ import java.util.concurrent.LinkedBlockingDeque;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import poke.monitor.MonitorInitializer;
+import poke.server.PortListener;
+import poke.server.ServerHandler;
+import poke.server.ServerInitializer;
+import poke.server.management.managers.ClientListener;
+import poke.server.management.managers.HeartbeatListener;
+
 import com.google.protobuf.GeneratedMessage;
 
+import eye.Comm.Network;
 import eye.Comm.Request;
 
 /**
@@ -47,12 +55,18 @@ public class CommConnection {
 	private ChannelFuture channel; // do not use directly call connect()!
 	private EventLoopGroup group;
 	private CommHandler handler;
+	private eye.Comm.Request requestMsg;
+	private ServerHandler serverHandler;
 
 	// our surge protection using a in-memory cache for messages
 	private LinkedBlockingDeque<com.google.protobuf.GeneratedMessage> outbound;
 
 	// message processing is delegated to a threading model
 	private OutboundWorker worker;
+	
+	HeartbeatListener hblistener;
+	CommListener clistener;
+	ClientListener clientListener;
 
 	/**
 	 * Create a connection instance to this host/port. On consruction the
@@ -85,7 +99,9 @@ public class CommConnection {
 	 */
 	public void sendMessage(Request req) throws Exception {
 		// enqueue message
+		this.requestMsg=req;
 		outbound.put(req);
+		
 	}
 
 	/**
@@ -93,7 +109,31 @@ public class CommConnection {
 	 * 
 	 * @param listener
 	 */
-	public void addListener(CommListener listener) {
+	/*public void addListener(CommListener listener) {
+		// note: the handler should not be null as we create it on construction
+
+		try {
+			this.clistener=listener;
+			handler.addListener(listener);
+		} catch (Exception e) {
+			logger.error("failed to add listener", e);
+		}
+	}
+	
+	//Jeena
+	public void addListener(HeartbeatListener listener) {
+		// note: the handler should not be null as we create it on construction
+
+		try {
+			
+			this.hblistener=listener;
+			handler.addListener(listener);
+		} catch (Exception e) {
+			logger.error("failed to add listener", e);
+		}
+	}
+	
+	public void addListener(PortListener listener) {
 		// note: the handler should not be null as we create it on construction
 
 		try {
@@ -101,7 +141,22 @@ public class CommConnection {
 		} catch (Exception e) {
 			logger.error("failed to add listener", e);
 		}
+	}*/
+	
+	
+	public void addListener(ClientListener listener)
+	{
+		try
+		{
+			this.clientListener=listener;
+			handler.addListener(listener);
+		}
+		catch(Exception e)
+		{
+			logger.error("failed to add listener", e);
+		}
 	}
+	//Jeena
 
 	private void init() {
 		// the queue to support client-side surging
@@ -207,13 +262,19 @@ public class CommConnection {
 					// block until a message is enqueued
 					GeneratedMessage msg = conn.outbound.take();
 					if (ch.isWritable()) {
-						CommHandler handler = conn.connect().pipeline().get(CommHandler.class);
+					///Jeena	//CommHandler handler = conn.connect().pipeline().get(CommHandler.class);
 						handler.setChannel(ch);
 						if (!handler.send(msg))
+						{
+							logger.info("Send message in handler returned false");
 							conn.outbound.putFirst(msg);
+						}
 
 					} else
+					{
+						logger.info("Channel is not writable");
 						conn.outbound.putFirst(msg);
+					}
 				} catch (InterruptedException ie) {
 					break;
 				} catch (Exception e) {

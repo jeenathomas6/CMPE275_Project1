@@ -31,3 +31,14 @@ Storage:
 
 A storage framework is provided to show you a way (others exists) 
 to decouple domain logic from backend persistence.
+
+
+To Do:
+1. LeaderFunction shd change when the leader file changes.
+2. Update hashtable when leader changes.
+3. leader election shd work even with 2 nodes
+4. Database and queue in one common node
+
+Finished Task:
+
+

@@ -23,6 +23,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.protobuf.GeneratedMessage;
+
 import poke.server.queue.PerChannelQueue.InboundWorker;
 import poke.server.queue.PerChannelQueue.OutboundWorker;
 import eye.Comm.Request;
@@ -129,5 +131,11 @@ public class OnlyOneQueue implements ChannelQueue {
 			this.req = req;
 			this.channel = channel;
 		}
+	}
+
+	@Override
+	public LinkedBlockingDeque<GeneratedMessage> getInboundQueue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

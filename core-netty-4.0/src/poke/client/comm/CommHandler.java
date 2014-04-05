@@ -26,12 +26,21 @@ import java.util.concurrent.ConcurrentMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import poke.rabbitmq.MQueueFactory;
+import poke.server.PortListener;
+import poke.server.management.managers.ClientListener;
+import poke.server.management.managers.HeartbeatListener;
+import poke.server.resources.RabbitMQIP;
 
 import com.google.protobuf.GeneratedMessage;
+import com.rabbitmq.client.AMQP;
 
 public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 	protected static Logger logger = LoggerFactory.getLogger("connect");
 	protected ConcurrentMap<String, CommListener> listeners = new ConcurrentHashMap<String, CommListener>();
+	protected ConcurrentMap<String,HeartbeatListener> testListeners=new ConcurrentHashMap<String,HeartbeatListener>();
+	protected ConcurrentMap<String,PortListener> test=new ConcurrentHashMap<String,PortListener>();
+	protected ConcurrentMap<String,ClientListener> pleaseWork=new ConcurrentHashMap<String,ClientListener>();
 	private volatile Channel channel;
 
 	public CommHandler() {
@@ -67,14 +76,31 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 		{
 			logger.info("Channel is null");
 		}
-		//ChannelFuture cf = channel.write(msg);
-		ChannelFuture ch=channel.write(msg);
+		//ChannelFuture cf = channel.write(msg); 
+		//addListener(hb);
+		//addListener(c);
+		//addListener(clientListener); 
+		
+		/*Jeena ChannelFuture ch=channel.writeAndFlush(msg);
+		logger.info("Channel is "+channel);
+		logger.info("wrote message to channel");
+		
 		
 		if (ch.isDone() && !ch.isSuccess()) {
 			logger.info("Failed!!!");
 			logger.error("failed to poke!");
 			return false;
+		}Jeena*/
+		
+		MQueueFactory factory = new MQueueFactory(RabbitMQIP.rabbitMQIP, AMQP.PROTOCOL.PORT, "guest", "guest");
+		ClientProducer queue = factory.createProducer("netty-testing");
+		try {
+			queue.post(msg);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		logger.info("message sent");
 
 		return true;
 	}
@@ -94,7 +120,41 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 			return;
 
 		listeners.putIfAbsent(listener.getListenerID(), listener);
+		
 	}
+	
+	public void addListener(HeartbeatListener listener) {
+		if (listener == null)
+		{
+			logger.info("Heartbeat listener null -Jeena");
+			return;
+		}
+		logger.info("Adding heart beat listener - Jeena");
+		logger.info("Listener id is "+listener.getListenerID());
+		logger.info("Listener is "+listener);
+		testListeners.putIfAbsent(listener.getListenerID(), listener);
+	}
+	
+	public void addListener(PortListener listener) {
+		if (listener == null)
+		{
+			logger.info("Heartbeat listener null -Jeena");
+			return;
+		}
+
+		test.putIfAbsent(listener.getListenerID(), listener);
+	}
+	
+	public void addListener(ClientListener listener) {
+		if (listener == null)
+		{
+			logger.info("Heartbeat listener null -Jeena");
+			return;
+		}
+
+		pleaseWork.putIfAbsent(listener.getListenerID(), listener);
+	}
+	
 
 	/**
 	 * a message was received from the server. Here we dispatch the message to

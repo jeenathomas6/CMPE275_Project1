@@ -18,6 +18,9 @@ package poke.demo;
 import poke.client.ClientCommand;
 import poke.client.ClientPrintListener;
 import poke.client.comm.CommListener;
+import poke.server.PortListener;
+import poke.server.management.managers.ClientListener;
+import poke.server.management.managers.HeartbeatListener;
 
 /**
  * DEMO: how to use the command class
@@ -34,9 +37,14 @@ public class Jab {
 	}
 
 	public void run() {
-		ClientCommand cc = new ClientCommand("localhost", 5570);
-		CommListener listener = new ClientPrintListener("jab demo");
-		cc.addListener(listener);
+		ClientCommand cc = new ClientCommand("localhost", 5573);
+		//CommListener listener = new ClientPrintListener("jab demo");
+		//HeartbeatListener hblistener = new HeartbeatListener("jab_demo");
+		//ClientListener clientListener=new ClientListener("jab_demo");
+		//PortListener portlistener=new PortListener("jab_demo");
+		//cc.addListener(listener);
+		//cc.addListener(hblistener);
+		//cc.addListener(clientListener);
 
 		for (int i = 0; i < 3; i++) {
 			count++;

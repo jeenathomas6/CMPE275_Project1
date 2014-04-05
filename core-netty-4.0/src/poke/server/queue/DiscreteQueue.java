@@ -22,8 +22,11 @@ import java.util.TreeMap;
 import java.util.concurrent.LinkedBlockingDeque;
 
 import io.netty.channel.Channel;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.protobuf.GeneratedMessage;
 
 import poke.server.queue.PerChannelQueue.InboundWorker;
 import poke.server.queue.PerChannelQueue.OutboundWorker;
@@ -236,5 +239,11 @@ public class DiscreteQueue implements ChannelQueue {
 					return c;
 			}
 		}
+	}
+
+	@Override
+	public LinkedBlockingDeque<GeneratedMessage> getInboundQueue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

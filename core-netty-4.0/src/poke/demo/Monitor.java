@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import poke.monitor.HeartMonitor;
 import poke.monitor.MonitorListener;
 import eye.Comm.Management;
+import eye.Comm.Request;
 
 /**
  * DEMO: how to listen to a heartbeat.
@@ -29,8 +30,7 @@ import eye.Comm.Management;
  * 
  */
 public class Monitor {
-
-    protected static Logger logger = LoggerFactory.getLogger("client");
+	protected static Logger logger = LoggerFactory.getLogger("client");
 
 	/**
 	 * @param args

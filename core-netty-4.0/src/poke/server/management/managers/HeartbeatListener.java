@@ -70,7 +70,7 @@ public class HeartbeatListener implements MonitorListener {
 			logger.info("Recieved election response from "+msg.getElection().getNodeId());
 			//call the process Request of Election Manager
 			ElectionManager em=ElectionManager.getInstance();
-			em.processRequest(msg.getElection());
+			em.processRequest(msg, msg.getElection());
 		}
 		
 	}

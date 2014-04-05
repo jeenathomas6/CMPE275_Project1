@@ -24,8 +24,12 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import poke.server.queue.ChannelQueue;
 import poke.server.queue.QueueFactory;
+
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * As implemented, this server handler does not share queues or worker threads
@@ -45,12 +49,13 @@ import poke.server.queue.QueueFactory;
  * 
  */
 public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
-	protected static Logger logger = LoggerFactory.getLogger("server");
+	protected static Logger logger = LoggerFactory.getLogger("server-ServerHandler");
 
 	private ChannelQueue queue;
+    protected ConcurrentMap<String, Listner> listeners = new ConcurrentHashMap<String, Listner>();
 
 	public ServerHandler() {
-		// logger.info("** ServerHandler created **");
+		logger.info("** ServerHandler created **");
 	}
 
 	@Override
@@ -60,6 +65,13 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 		queueInstance(ctx.channel()).enqueueRequest(req, ctx.channel());
 	}
 
+
+    public void addListener(Listner listener) {
+        if (listener == null)
+            return;
+        listeners.putIfAbsent(listener.getListenerID(), listener);
+    }
+
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
 
@@ -67,7 +79,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-		logger.error("Unexpected exception from downstream.", cause);
+		logger.error("Server Unexpected exception from downstream.", cause);
 		ctx.close();
 	}
 
@@ -89,7 +101,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 			// on close remove from queue
 			channel.closeFuture().addListener(new ConnectionClosedListener(queue));
 		}
-
 		return queue;
 	}
 

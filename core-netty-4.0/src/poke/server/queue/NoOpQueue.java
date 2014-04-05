@@ -15,10 +15,14 @@
  */
 package poke.server.queue;
 
+import java.util.concurrent.LinkedBlockingDeque;
+
 import io.netty.channel.Channel;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.protobuf.GeneratedMessage;
 
 import eye.Comm.Request;
 
@@ -49,6 +53,12 @@ public class NoOpQueue implements ChannelQueue {
 	@Override
 	public void enqueueResponse(Request reply, Channel notused) {
 		logger.info(queueName + ": response received");
+	}
+
+	@Override
+	public LinkedBlockingDeque<GeneratedMessage> getInboundQueue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -9,9 +9,12 @@ import io.netty.handler.codec.compression.ZlibCodecFactory;
 import io.netty.handler.codec.compression.ZlibWrapper;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 	boolean compress = false;
+    protected static Logger logger = LoggerFactory.getLogger("server-Initializer");
 
 	public ServerInitializer(boolean enableCompression) {
 		compress = enableCompression;
@@ -20,7 +23,7 @@ public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 	@Override
 	public void initChannel(SocketChannel ch) throws Exception {
 		ChannelPipeline pipeline = ch.pipeline();
-
+        logger.info("inside initChannel***********************");
 		// Enable stream compression (you can remove these two if unnecessary)
 		if (compress) {
 			pipeline.addLast("deflater", ZlibCodecFactory.newZlibEncoder(ZlibWrapper.GZIP));

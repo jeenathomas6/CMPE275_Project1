@@ -15,6 +15,8 @@
  */
 package poke.server.queue;
 
+import java.util.concurrent.LinkedBlockingDeque;
+
 import io.netty.channel.Channel;
 import eye.Comm.Request;
 
@@ -55,5 +57,8 @@ public interface ChannelQueue {
 	 *            implementations, this is redundant.
 	 */
 	public abstract void enqueueResponse(Request reply, Channel channel);
+	
+	public LinkedBlockingDeque<com.google.protobuf.GeneratedMessage> getInboundQueue();
+
 
 }

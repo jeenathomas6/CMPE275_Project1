@@ -36,7 +36,7 @@ public class Route {
 	public void run() {
 		ClientCommand cc = new ClientCommand("localhost", 5570);
 		CommListener listener = new ClientPrintListener("jab demo");
-		cc.addListener(listener);
+		//cc.addListener(listener);
 
 		for (int i = 0; i < 3; i++) {
 			count++;

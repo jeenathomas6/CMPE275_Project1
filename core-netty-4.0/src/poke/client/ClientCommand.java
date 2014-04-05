@@ -19,8 +19,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import poke.client.comm.CommConnection;
+import poke.client.comm.CommHandler;
 import poke.client.comm.CommListener;
+import poke.server.PortListener;
+import poke.server.management.managers.ClientListener;
+import poke.server.management.managers.HeartbeatListener;
 import eye.Comm.Header;
+import eye.Comm.Management;
+import eye.Comm.Network;
+import eye.Comm.Network.NetworkAction;
 import eye.Comm.Payload;
 import eye.Comm.Ping;
 import eye.Comm.Request;
@@ -60,9 +67,26 @@ public class ClientCommand {
 	 * 
 	 * @param listener
 	 */
-	public void addListener(CommListener listener) {
+	/*public void addListener(CommListener listener) {
 		comm.addListener(listener);
 	}
+	
+	//Jeena
+	public void addListener(HeartbeatListener listener)
+	{
+		comm.addListener(listener);
+	}
+	
+	public void addListener(PortListener listener)
+	{
+		comm.addListener(listener);
+	}*/
+	
+	public void addListener(ClientListener listener)
+	{
+		comm.addListener(listener);
+	}
+	//Jeena
 
 	/**
 	 * Our network's equivalent to ping
@@ -79,21 +103,30 @@ public class ClientCommand {
 		// payload containing data
 		Request.Builder r = Request.newBuilder();
 		eye.Comm.Payload.Builder p = Payload.newBuilder();
+		
 		p.setPing(f.build());
 		r.setBody(p.build());
 
 		// header with routing info
 		eye.Comm.Header.Builder h = Header.newBuilder();
 		h.setOriginator("client");
+		
 		h.setTag("test finger");
 		h.setTime(System.currentTimeMillis());
 		h.setRoutingId(eye.Comm.Header.Routing.PING);
 		r.setHeader(h.build());
+		
+		
 
 		eye.Comm.Request req = r.build();
+		CommHandler ch=new CommHandler();
+		
+		
 
 		try {
-			comm.sendMessage(req);
+			//comm.sendMessage(req);
+			ch.send(req);
+			
 		} catch (Exception e) {
 			logger.warn("Unable to deliver message, queuing");
 		}

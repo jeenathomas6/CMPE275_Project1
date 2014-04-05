@@ -44,18 +44,27 @@ public class ClientPrintListener implements CommListener {
 
 	@Override
 	public void onMessage(eye.Comm.Request msg) {
+		logger.info("in clientprint listener");
+		
 		if (logger.isDebugEnabled())
 			ClientUtil.printHeader(msg.getHeader());
 
 		if (msg.getHeader().getRoutingId().getNumber() == Header.Routing.PING_VALUE)
+		{
+			logger.info("In client print listener");
 			ClientUtil.printPing(msg.getBody().getPing());
+		}
 		else if (msg.getHeader().getRoutingId().getNumber() == Header.Routing.NAMESPACES_VALUE) {
+			logger.info("In namespace value");
 			// namespace responses
 		} else if (msg.getHeader().getRoutingId().getNumber() == Header.Routing.JOBS_VALUE) {
+			logger.info("In job values");
 			// job responses
 		} else if (msg.getHeader().getRoutingId().getNumber() == Header.Routing.MANAGE_VALUE) {
+			logger.info("In management value");
 			// management responses
 		} else {
+			logger.info("Unexpected reply");
 			// unexpected reply - how do you handle this?
 		}
 	}
