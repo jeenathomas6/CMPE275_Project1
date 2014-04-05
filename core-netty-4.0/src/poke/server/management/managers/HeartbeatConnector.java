@@ -27,6 +27,7 @@ import java.io.IOException;
 
 import poke.monitor.HeartMonitor;
 import poke.monitor.MonitorHandler;
+import poke.server.ServerNodeInfo;
 import poke.server.management.managers.HeartbeatData.BeatStatus;
 
 /**
@@ -99,7 +100,7 @@ public class HeartbeatConnector extends Thread {
 							hb.startHeartbeat(hb.getNodeInfo());
                             counter ++;
                             if(counter > 5){
-                                try {
+                               /* try {
                                     String sCurrentLine;
                                     BufferedReader br = new BufferedReader(new FileReader("src/leader.txt"));
                                     while ((sCurrentLine = br.readLine()) != null) {
@@ -109,10 +110,11 @@ public class HeartbeatConnector extends Thread {
                                     }
                                 } catch (IOException ioe) {
                                     ioe.printStackTrace();
-                                }
+                                }*/
 
-                                logger.info("The node and leader == >" + leader[1] + "==>" + hb.getPortId());
-                                if( !startedElection && hb.getPortId().equals(leader[1])){
+                                //logger.info("The node and leader == >" + leader[1] + "==>" + hb.getPortId());
+                                logger.info("The leader and nodeid == >" + ServerNodeInfo.getLeaderId() + "==>" + ServerNodeInfo.nodeId);
+                                if( !startedElection && ServerNodeInfo.isLeader()){
                                     logger.info("<-----------------Starting elections------------------>");
                                     HeartbeatManager.getInstance().declareElection = true;
                                     startedElection = true;//TODO reset the startedElection value and declare election

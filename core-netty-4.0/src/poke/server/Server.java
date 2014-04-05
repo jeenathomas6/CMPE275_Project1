@@ -106,6 +106,8 @@ public class Server {
 	
 	public static ServerInfo serverInfo = new ServerInfo();
 	public static LeaderFunctions lf;
+
+    public static String LastModifiedAt;
 	
 
 	/**
@@ -137,7 +139,7 @@ public class Server {
 
 	private void init(File cfg) {
 		// resource initialization - how message are processed
-logger.info("Inside init");
+        logger.info("Inside init");
 		BufferedInputStream br = null;
 		try {
 			byte[] raw = new byte[(int) cfg.length()];
@@ -724,10 +726,11 @@ logger.info("Inside release");
 		svr.run();
         //callfromclient();
 		//Initialize hash table
-		serverInfo=new ServerInfo();
+
+        serverInfo=new ServerInfo();
 		lf=new LeaderFunctions(serverInfo);
 
-        if(ServerNodeInfo.nodeId.equals("zero"))
+        if(ServerNodeInfo.isLeader())
 		{ 
 			StartConsumer sc=new StartConsumer();
 			Thread conThread=new Thread(sc);

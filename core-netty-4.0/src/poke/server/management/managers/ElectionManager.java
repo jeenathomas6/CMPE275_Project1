@@ -29,6 +29,7 @@ import java.io.IOException;
 import eye.Comm.LeaderElection;
 import eye.Comm.LeaderElection.VoteAction;
 import poke.resources.ForwardResource;
+import poke.server.ServerNodeInfo;
 import poke.server.Util.CommanUtils;
 import poke.server.conf.ServerConf;
 
@@ -180,11 +181,13 @@ public class ElectionManager extends Thread{
 
     public static boolean nominateWinner(String winnerNode, String nodeId){
         logger.info("<-------------------------NominateWinner----> :"+ winnerNode);
-        try {
-            BufferedWriter out = new BufferedWriter(new FileWriter("src/leader.txt"));
-            out.write("Leader:" + winnerNode);
-            out.close();
-        } catch (IOException e) {}
+
+        try{
+            ServerNodeInfo.writeLeaderIntoFile(winnerNode);
+        }
+        catch (Exception e){
+            logger.info("Exception in writing the leader into file");
+        }
 
         LeaderElection.Builder leaderBuilder = LeaderElection.newBuilder();
         leaderBuilder.setVote(VoteAction.DECLAREWINNER);
