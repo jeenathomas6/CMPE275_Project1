@@ -81,7 +81,7 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 		//addListener(c);
 		//addListener(clientListener); 
 		
-		/*Jeena ChannelFuture ch=channel.writeAndFlush(msg);
+		ChannelFuture ch=channel.writeAndFlush(msg);
 		logger.info("Channel is "+channel);
 		logger.info("wrote message to channel");
 		
@@ -90,16 +90,16 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 			logger.info("Failed!!!");
 			logger.error("failed to poke!");
 			return false;
-		}Jeena*/
+		}
 		
-		MQueueFactory factory = new MQueueFactory(RabbitMQIP.rabbitMQIP, AMQP.PROTOCOL.PORT, "guest", "guest");
+		/*MQueueFactory factory = new MQueueFactory(RabbitMQIP.rabbitMQIP, AMQP.PROTOCOL.PORT, "guest", "guest");
 		ClientProducer queue = factory.createProducer("netty-testing");
 		try {
 			queue.post(msg);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		logger.info("message sent");
 
 		return true;

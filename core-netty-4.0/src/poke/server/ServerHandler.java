@@ -62,6 +62,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 	public void channelRead0(ChannelHandlerContext ctx, eye.Comm.Request req) throws Exception {
 		// processing is deferred to the worker threads
 		logger.info("---> server got a message");
+		logger.info("Message received is "+req);
 		queueInstance(ctx.channel()).enqueueRequest(req, ctx.channel());
 	}
 

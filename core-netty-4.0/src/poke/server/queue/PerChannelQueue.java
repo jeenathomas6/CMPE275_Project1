@@ -65,7 +65,7 @@ public class PerChannelQueue implements ChannelQueue {
 	private ThreadGroup tgroup = new ThreadGroup("ServerQueue-" + System.nanoTime());
 
 	protected PerChannelQueue(Channel channel) {
-        logger.info("I m in the PerchabbelQueu");
+        logger.info("I'm in the per channel queue constructor");
 		this.channel = channel;
 		init();
 	}
@@ -229,7 +229,7 @@ public class PerChannelQueue implements ChannelQueue {
 			this.workerId = workerId;
 			this.sq = sq;
 
-			if (outbound == null)
+			if (inbound == null)
 				throw new RuntimeException("connection worker detected null queue");
 		}
 
@@ -265,8 +265,9 @@ public class PerChannelQueue implements ChannelQueue {
 									"Request not processed");
 						} else
 							reply = rsc.process(req);
-
-						sq.enqueueResponse(reply, null);
+						
+						//jeena ---> commenting this now so it wont go to the response queue.
+						//sq.enqueueResponse(reply, null);
 					}
 
 				} catch (InterruptedException ie) {

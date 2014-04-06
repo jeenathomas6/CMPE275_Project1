@@ -119,13 +119,13 @@ public class ClientCommand {
 		
 
 		eye.Comm.Request req = r.build();
-		CommHandler ch=new CommHandler();
+		//CommHandler ch=new CommHandler();
 		
 		
 
 		try {
-			//comm.sendMessage(req);
-			ch.send(req);
+			comm.sendMessage(req);
+			//ch.send(req);
 			
 		} catch (Exception e) {
 			logger.warn("Unable to deliver message, queuing");

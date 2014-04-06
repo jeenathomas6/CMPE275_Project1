@@ -9,15 +9,21 @@ import io.netty.handler.codec.compression.ZlibCodecFactory;
 import io.netty.handler.codec.compression.ZlibWrapper;
 import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 	boolean compress = false;
     protected static Logger logger = LoggerFactory.getLogger("server-Initializer");
+    ServerHandler handler;
 
 	public ServerInitializer(boolean enableCompression) {
 		compress = enableCompression;
+	}
+	public void setHandler(ServerHandler handler)
+	{
+		this.handler=handler;
 	}
 
 	@Override

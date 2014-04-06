@@ -732,20 +732,22 @@ logger.info("Inside release");
 
         if(ServerNodeInfo.isLeader())
 		{ 
-			StartConsumer sc=new StartConsumer();
+			/*StartConsumer sc=new StartConsumer();
 			Thread conThread=new Thread(sc);
-			conThread.start();
+			conThread.start();*/
+        	
+        	
 			
-			StartResponseConsumer src=new StartResponseConsumer();
+			/*StartResponseConsumer src=new StartResponseConsumer();
 			Thread connectionThread=new Thread(src);
-			connectionThread.start();
+			connectionThread.start();*/
 			
 		}
 		else
 		{
-			StartSubscriber ss=new StartSubscriber();
+			/*StartSubscriber ss=new StartSubscriber();
 			Thread conThread=new Thread(ss);
-			conThread.start();
+			conThread.start();*/
 		}
 		
 		

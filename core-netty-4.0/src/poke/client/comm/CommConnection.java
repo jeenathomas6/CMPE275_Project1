@@ -166,8 +166,11 @@ public class CommConnection {
 		try {
 			
 			handler = new CommHandler();
+			serverHandler = new ServerHandler();
+			ServerInitializer ci=new ServerInitializer(false);
+			ci.setHandler(serverHandler);
 			Bootstrap b = new Bootstrap();
-			b.group(group).channel(NioSocketChannel.class).handler(handler);
+			b.group(group).channel(NioSocketChannel.class).handler(ci);
 			b.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
 			b.option(ChannelOption.TCP_NODELAY, true);
 			b.option(ChannelOption.SO_KEEPALIVE, true);
