@@ -15,9 +15,15 @@
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.2.jar" sourcepath="/Users/gash/Developer/slf4j-1.7.2/src"/>
 	<classpathentry exported="true" kind="lib" path="lib/protobuf-java-2.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/netty-all-4.0.15.Final.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/mongo-2.10.1.jar"/>
 	<classpathentry kind="lib" path="lib/rabbitmq-client.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.2.jar"/>
+=======
+	<classpathentry exported="true" kind="lib" path="/mq-rabbit-simple/lib/rabbitmq-java-client-bin-3.2.3/rabbitmq-java-client-bin-3.2.3/rabbitmq-client.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/275_project1/core-netty-4.0/lib/mongo-2.10.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/275_project1/core-netty-4.0/lib/json-simple-1.1.1.jar"/>
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 	<classpathentry kind="output" path="classes"/>
 </classpath>

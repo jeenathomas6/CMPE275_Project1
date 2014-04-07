@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
+<<<<<<< HEAD
 <project xmlns:ivy="antlib:org.apache.ivy.ant" name="netty demo" basedir="." default="build">
+=======
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="netty demo" basedir="C:/Users/Jobin/Desktop/Jeena/core-netty-4.0" default="build">
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 	<target name="resolve" depends="init">
 		<ivy:retrieve pattern="${lib.dir}/[module]-[type]-[artifact]-[revision].[ext]" />

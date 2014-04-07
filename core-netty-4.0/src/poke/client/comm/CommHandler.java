@@ -27,6 +27,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import poke.rabbitmq.MQueueFactory;
+<<<<<<< HEAD
+=======
+import poke.server.PortListener;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 import poke.server.management.managers.ClientListener;
 import poke.server.management.managers.HeartbeatListener;
 import poke.server.resources.RabbitMQIP;
@@ -38,7 +42,11 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 	protected static Logger logger = LoggerFactory.getLogger("connect");
 	protected ConcurrentMap<String, CommListener> listeners = new ConcurrentHashMap<String, CommListener>();
 	protected ConcurrentMap<String,HeartbeatListener> testListeners=new ConcurrentHashMap<String,HeartbeatListener>();
+<<<<<<< HEAD
 	//protected ConcurrentMap<String,JobProposalListener> test=new ConcurrentHashMap<String,JobProposalListener>();
+=======
+	protected ConcurrentMap<String,PortListener> test=new ConcurrentHashMap<String,PortListener>();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 	protected ConcurrentMap<String,ClientListener> pleaseWork=new ConcurrentHashMap<String,ClientListener>();
 	private volatile Channel channel;
 
@@ -134,8 +142,12 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 		testListeners.putIfAbsent(listener.getListenerID(), listener);
 	}
 	
+<<<<<<< HEAD
 	/*
 	public void addListener(JobProposalListener listener) {
+=======
+	public void addListener(PortListener listener) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		if (listener == null)
 		{
 			logger.info("Heartbeat listener null -Jeena");
@@ -143,7 +155,11 @@ public class CommHandler extends SimpleChannelInboundHandler<eye.Comm.Request> {
 		}
 
 		test.putIfAbsent(listener.getListenerID(), listener);
+<<<<<<< HEAD
 	}*/
+=======
+	}
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 	
 	public void addListener(ClientListener listener) {
 		if (listener == null)

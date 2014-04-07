@@ -11316,6 +11316,7 @@ public final class Comm {
     // optional int64 time = 4;
     /**
      * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
      *
      * <pre>
      * Identify the request at server with these tags(please maintain these across all teams):
@@ -11325,10 +11326,13 @@ public final class Comm {
      * SearchCourse
      * Voting	
      * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
      */
     boolean hasTime();
     /**
      * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
      *
      * <pre>
      * Identify the request at server with these tags(please maintain these across all teams):
@@ -11338,6 +11342,8 @@ public final class Comm {
      * SearchCourse
      * Voting	
      * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
      */
     long getTime();
 
@@ -11859,6 +11865,7 @@ public final class Comm {
     private long time_;
     /**
      * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
      *
      * <pre>
      * Identify the request at server with these tags(please maintain these across all teams):
@@ -11868,12 +11875,15 @@ public final class Comm {
      * SearchCourse
      * Voting	
      * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
      */
     public boolean hasTime() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
      *
      * <pre>
      * Identify the request at server with these tags(please maintain these across all teams):
@@ -11883,6 +11893,8 @@ public final class Comm {
      * SearchCourse
      * Voting	
      * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
      */
     public long getTime() {
       return time_;
@@ -12779,6 +12791,7 @@ public final class Comm {
       private long time_ ;
       /**
        * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
        *
        * <pre>
        * Identify the request at server with these tags(please maintain these across all teams):
@@ -12788,12 +12801,15 @@ public final class Comm {
        * SearchCourse
        * Voting	
        * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
        */
       public boolean hasTime() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
        *
        * <pre>
        * Identify the request at server with these tags(please maintain these across all teams):
@@ -12803,12 +12819,15 @@ public final class Comm {
        * SearchCourse
        * Voting	
        * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
        */
       public long getTime() {
         return time_;
       }
       /**
        * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
        *
        * <pre>
        * Identify the request at server with these tags(please maintain these across all teams):
@@ -12818,6 +12837,8 @@ public final class Comm {
        * SearchCourse
        * Voting	
        * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
        */
       public Builder setTime(long value) {
         bitField0_ |= 0x00000008;
@@ -12827,6 +12848,7 @@ public final class Comm {
       }
       /**
        * <code>optional int64 time = 4;</code>
+<<<<<<< HEAD
        *
        * <pre>
        * Identify the request at server with these tags(please maintain these across all teams):
@@ -12836,6 +12858,8 @@ public final class Comm {
        * SearchCourse
        * Voting	
        * </pre>
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
        */
       public Builder clearTime() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -13756,6 +13780,7 @@ public final class Comm {
      */
     eye.Comm.JobOperationOrBuilder getJobOpOrBuilder();
 
+<<<<<<< HEAD
     // optional .SignIn sign_in = 8;
     /**
      * <code>optional .SignIn sign_in = 8;</code>
@@ -13840,6 +13865,8 @@ public final class Comm {
      */
     eye.Comm.FindLeaderOrBuilder getFindLeaderOrBuilder();
 
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     // optional .JobStatus job_status = 6;
     /**
      * <code>optional .JobStatus job_status = 6;</code>
@@ -13976,7 +14003,11 @@ public final class Comm {
             }
             case 50: {
               eye.Comm.JobStatus.Builder subBuilder = null;
+<<<<<<< HEAD
               if (((bitField0_ & 0x00000200) == 0x00000200)) {
+=======
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
                 subBuilder = jobStatus_.toBuilder();
               }
               jobStatus_ = input.readMessage(eye.Comm.JobStatus.PARSER, extensionRegistry);
@@ -13984,12 +14015,20 @@ public final class Comm {
                 subBuilder.mergeFrom(jobStatus_);
                 jobStatus_ = subBuilder.buildPartial();
               }
+<<<<<<< HEAD
               bitField0_ |= 0x00000200;
+=======
+              bitField0_ |= 0x00000008;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
             case 58: {
               eye.Comm.NameSpaceStatus.Builder subBuilder = null;
+<<<<<<< HEAD
               if (((bitField0_ & 0x00000400) == 0x00000400)) {
+=======
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
                 subBuilder = spaceStatus_.toBuilder();
               }
               spaceStatus_ = input.readMessage(eye.Comm.NameSpaceStatus.PARSER, extensionRegistry);
@@ -13997,6 +14036,7 @@ public final class Comm {
                 subBuilder.mergeFrom(spaceStatus_);
                 spaceStatus_ = subBuilder.buildPartial();
               }
+<<<<<<< HEAD
               bitField0_ |= 0x00000400;
               break;
             }
@@ -14078,6 +14118,11 @@ public final class Comm {
               bitField0_ |= 0x00000100;
               break;
             }
+=======
+              bitField0_ |= 0x00000010;
+              break;
+            }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -14208,6 +14253,7 @@ public final class Comm {
       return jobOp_;
     }
 
+<<<<<<< HEAD
     // optional .SignIn sign_in = 8;
     public static final int SIGN_IN_FIELD_NUMBER = 8;
     private eye.Comm.SignIn signIn_;
@@ -14340,6 +14386,8 @@ public final class Comm {
       return findLeader_;
     }
 
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     // optional .JobStatus job_status = 6;
     public static final int JOB_STATUS_FIELD_NUMBER = 6;
     private eye.Comm.JobStatus jobStatus_;
@@ -14351,7 +14399,11 @@ public final class Comm {
      * </pre>
      */
     public boolean hasJobStatus() {
+<<<<<<< HEAD
       return ((bitField0_ & 0x00000200) == 0x00000200);
+=======
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     /**
      * <code>optional .JobStatus job_status = 6;</code>
@@ -14381,7 +14433,11 @@ public final class Comm {
      * <code>optional .NameSpaceStatus space_status = 7;</code>
      */
     public boolean hasSpaceStatus() {
+<<<<<<< HEAD
       return ((bitField0_ & 0x00000400) == 0x00000400);
+=======
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     /**
      * <code>optional .NameSpaceStatus space_status = 7;</code>
@@ -14400,12 +14456,15 @@ public final class Comm {
       ping_ = eye.Comm.Ping.getDefaultInstance();
       spaceOp_ = eye.Comm.NameSpaceOperation.getDefaultInstance();
       jobOp_ = eye.Comm.JobOperation.getDefaultInstance();
+<<<<<<< HEAD
       signIn_ = eye.Comm.SignIn.getDefaultInstance();
       signUp_ = eye.Comm.SignUp.getDefaultInstance();
       reqList_ = eye.Comm.RequestList.getDefaultInstance();
       getCourse_ = eye.Comm.GetCourse.getDefaultInstance();
       initVoting_ = eye.Comm.InitVoting.getDefaultInstance();
       findLeader_ = eye.Comm.FindLeader.getDefaultInstance();
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       jobStatus_ = eye.Comm.JobStatus.getDefaultInstance();
       spaceStatus_ = eye.Comm.NameSpaceStatus.getDefaultInstance();
     }
@@ -14432,6 +14491,7 @@ public final class Comm {
           return false;
         }
       }
+<<<<<<< HEAD
       if (hasSignIn()) {
         if (!getSignIn().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -14456,6 +14516,8 @@ public final class Comm {
           return false;
         }
       }
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       if (hasJobStatus()) {
         if (!getJobStatus().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -14484,6 +14546,7 @@ public final class Comm {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeMessage(3, jobOp_);
       }
+<<<<<<< HEAD
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeMessage(6, jobStatus_);
       }
@@ -14507,6 +14570,13 @@ public final class Comm {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeMessage(14, findLeader_);
+=======
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(6, jobStatus_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(7, spaceStatus_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -14529,6 +14599,7 @@ public final class Comm {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, jobOp_);
       }
+<<<<<<< HEAD
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, jobStatus_);
@@ -14560,6 +14631,15 @@ public final class Comm {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, findLeader_);
+=======
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, jobStatus_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, spaceStatus_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -14676,12 +14756,15 @@ public final class Comm {
           getPingFieldBuilder();
           getSpaceOpFieldBuilder();
           getJobOpFieldBuilder();
+<<<<<<< HEAD
           getSignInFieldBuilder();
           getSignUpFieldBuilder();
           getReqListFieldBuilder();
           getGetCourseFieldBuilder();
           getInitVotingFieldBuilder();
           getFindLeaderFieldBuilder();
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           getJobStatusFieldBuilder();
           getSpaceStatusFieldBuilder();
         }
@@ -14710,6 +14793,7 @@ public final class Comm {
           jobOpBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
+<<<<<<< HEAD
         if (signInBuilder_ == null) {
           signIn_ = eye.Comm.SignIn.getDefaultInstance();
         } else {
@@ -14746,18 +14830,28 @@ public final class Comm {
           findLeaderBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000100);
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (jobStatusBuilder_ == null) {
           jobStatus_ = eye.Comm.JobStatus.getDefaultInstance();
         } else {
           jobStatusBuilder_.clear();
         }
+<<<<<<< HEAD
         bitField0_ = (bitField0_ & ~0x00000200);
+=======
+        bitField0_ = (bitField0_ & ~0x00000008);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (spaceStatusBuilder_ == null) {
           spaceStatus_ = eye.Comm.NameSpaceStatus.getDefaultInstance();
         } else {
           spaceStatusBuilder_.clear();
         }
+<<<<<<< HEAD
         bitField0_ = (bitField0_ & ~0x00000400);
+=======
+        bitField0_ = (bitField0_ & ~0x00000010);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return this;
       }
 
@@ -14813,14 +14907,22 @@ public final class Comm {
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
+<<<<<<< HEAD
         if (signInBuilder_ == null) {
           result.signIn_ = signIn_;
         } else {
           result.signIn_ = signInBuilder_.build();
+=======
+        if (jobStatusBuilder_ == null) {
+          result.jobStatus_ = jobStatus_;
+        } else {
+          result.jobStatus_ = jobStatusBuilder_.build();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
+<<<<<<< HEAD
         if (signUpBuilder_ == null) {
           result.signUp_ = signUp_;
         } else {
@@ -14882,6 +14984,21 @@ public final class Comm {
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof eye.Comm.Payload) {
           return mergeFrom((eye.Comm.Payload)other);
+=======
+        if (spaceStatusBuilder_ == null) {
+          result.spaceStatus_ = spaceStatus_;
+        } else {
+          result.spaceStatus_ = spaceStatusBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof eye.Comm.Payload) {
+          return mergeFrom((eye.Comm.Payload)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
@@ -14899,6 +15016,7 @@ public final class Comm {
         if (other.hasJobOp()) {
           mergeJobOp(other.getJobOp());
         }
+<<<<<<< HEAD
         if (other.hasSignIn()) {
           mergeSignIn(other.getSignIn());
         }
@@ -14917,6 +15035,8 @@ public final class Comm {
         if (other.hasFindLeader()) {
           mergeFindLeader(other.getFindLeader());
         }
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (other.hasJobStatus()) {
           mergeJobStatus(other.getJobStatus());
         }
@@ -14946,6 +15066,7 @@ public final class Comm {
             return false;
           }
         }
+<<<<<<< HEAD
         if (hasSignIn()) {
           if (!getSignIn().isInitialized()) {
             
@@ -14970,6 +15091,8 @@ public final class Comm {
             return false;
           }
         }
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (hasJobStatus()) {
           if (!getJobStatus().isInitialized()) {
             
@@ -15427,6 +15550,7 @@ public final class Comm {
         return jobOpBuilder_;
       }
 
+<<<<<<< HEAD
       // optional .SignIn sign_in = 8;
       private eye.Comm.SignIn signIn_ = eye.Comm.SignIn.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
@@ -15459,11 +15583,58 @@ public final class Comm {
           onChanged();
         } else {
           signInBuilder_.setMessage(value);
+=======
+      // optional .JobStatus job_status = 6;
+      private eye.Comm.JobStatus jobStatus_ = eye.Comm.JobStatus.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobStatus, eye.Comm.JobStatus.Builder, eye.Comm.JobStatusOrBuilder> jobStatusBuilder_;
+      /**
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public boolean hasJobStatus() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public eye.Comm.JobStatus getJobStatus() {
+        if (jobStatusBuilder_ == null) {
+          return jobStatus_;
+        } else {
+          return jobStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public Builder setJobStatus(eye.Comm.JobStatus value) {
+        if (jobStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobStatus_ = value;
+          onChanged();
+        } else {
+          jobStatusBuilder_.setMessage(value);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignIn sign_in = 8;</code>
        */
       public Builder setSignIn(
@@ -15473,11 +15644,27 @@ public final class Comm {
           onChanged();
         } else {
           signInBuilder_.setMessage(builderForValue.build());
+=======
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public Builder setJobStatus(
+          eye.Comm.JobStatus.Builder builderForValue) {
+        if (jobStatusBuilder_ == null) {
+          jobStatus_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobStatusBuilder_.setMessage(builderForValue.build());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignIn sign_in = 8;</code>
        */
       public Builder mergeSignIn(eye.Comm.SignIn value) {
@@ -15492,11 +15679,32 @@ public final class Comm {
           onChanged();
         } else {
           signInBuilder_.mergeFrom(value);
+=======
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public Builder mergeJobStatus(eye.Comm.JobStatus value) {
+        if (jobStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              jobStatus_ != eye.Comm.JobStatus.getDefaultInstance()) {
+            jobStatus_ =
+              eye.Comm.JobStatus.newBuilder(jobStatus_).mergeFrom(value).buildPartial();
+          } else {
+            jobStatus_ = value;
+          }
+          onChanged();
+        } else {
+          jobStatusBuilder_.mergeFrom(value);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000008;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignIn sign_in = 8;</code>
        */
       public Builder clearSignIn() {
@@ -15505,11 +15713,26 @@ public final class Comm {
           onChanged();
         } else {
           signInBuilder_.clear();
+=======
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public Builder clearJobStatus() {
+        if (jobStatusBuilder_ == null) {
+          jobStatus_ = eye.Comm.JobStatus.getDefaultInstance();
+          onChanged();
+        } else {
+          jobStatusBuilder_.clear();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignIn sign_in = 8;</code>
        */
       public eye.Comm.SignIn.Builder getSignInBuilder() {
@@ -15576,11 +15799,92 @@ public final class Comm {
           onChanged();
         } else {
           signUpBuilder_.setMessage(value);
+=======
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public eye.Comm.JobStatus.Builder getJobStatusBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getJobStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      public eye.Comm.JobStatusOrBuilder getJobStatusOrBuilder() {
+        if (jobStatusBuilder_ != null) {
+          return jobStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return jobStatus_;
+        }
+      }
+      /**
+       * <code>optional .JobStatus job_status = 6;</code>
+       *
+       * <pre>
+       * replies only
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobStatus, eye.Comm.JobStatus.Builder, eye.Comm.JobStatusOrBuilder> 
+          getJobStatusFieldBuilder() {
+        if (jobStatusBuilder_ == null) {
+          jobStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.JobStatus, eye.Comm.JobStatus.Builder, eye.Comm.JobStatusOrBuilder>(
+                  jobStatus_,
+                  getParentForChildren(),
+                  isClean());
+          jobStatus_ = null;
+        }
+        return jobStatusBuilder_;
+      }
+
+      // optional .NameSpaceStatus space_status = 7;
+      private eye.Comm.NameSpaceStatus spaceStatus_ = eye.Comm.NameSpaceStatus.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.NameSpaceStatus, eye.Comm.NameSpaceStatus.Builder, eye.Comm.NameSpaceStatusOrBuilder> spaceStatusBuilder_;
+      /**
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public boolean hasSpaceStatus() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public eye.Comm.NameSpaceStatus getSpaceStatus() {
+        if (spaceStatusBuilder_ == null) {
+          return spaceStatus_;
+        } else {
+          return spaceStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public Builder setSpaceStatus(eye.Comm.NameSpaceStatus value) {
+        if (spaceStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spaceStatus_ = value;
+          onChanged();
+        } else {
+          spaceStatusBuilder_.setMessage(value);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignUp sign_up = 9;</code>
        */
       public Builder setSignUp(
@@ -15590,11 +15894,23 @@ public final class Comm {
           onChanged();
         } else {
           signUpBuilder_.setMessage(builderForValue.build());
+=======
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public Builder setSpaceStatus(
+          eye.Comm.NameSpaceStatus.Builder builderForValue) {
+        if (spaceStatusBuilder_ == null) {
+          spaceStatus_ = builderForValue.build();
+          onChanged();
+        } else {
+          spaceStatusBuilder_.setMessage(builderForValue.build());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignUp sign_up = 9;</code>
        */
       public Builder mergeSignUp(eye.Comm.SignUp value) {
@@ -15609,11 +15925,28 @@ public final class Comm {
           onChanged();
         } else {
           signUpBuilder_.mergeFrom(value);
+=======
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public Builder mergeSpaceStatus(eye.Comm.NameSpaceStatus value) {
+        if (spaceStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              spaceStatus_ != eye.Comm.NameSpaceStatus.getDefaultInstance()) {
+            spaceStatus_ =
+              eye.Comm.NameSpaceStatus.newBuilder(spaceStatus_).mergeFrom(value).buildPartial();
+          } else {
+            spaceStatus_ = value;
+          }
+          onChanged();
+        } else {
+          spaceStatusBuilder_.mergeFrom(value);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ |= 0x00000010;
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignUp sign_up = 9;</code>
        */
       public Builder clearSignUp() {
@@ -15622,11 +15955,22 @@ public final class Comm {
           onChanged();
         } else {
           signUpBuilder_.clear();
+=======
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public Builder clearSpaceStatus() {
+        if (spaceStatusBuilder_ == null) {
+          spaceStatus_ = eye.Comm.NameSpaceStatus.getDefaultInstance();
+          onChanged();
+        } else {
+          spaceStatusBuilder_.clear();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional .SignUp sign_up = 9;</code>
        */
       public eye.Comm.SignUp.Builder getSignUpBuilder() {
@@ -21140,6 +21484,103 @@ public final class Comm {
     }
 
     public SignIn getDefaultInstanceForType() {
+=======
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public eye.Comm.NameSpaceStatus.Builder getSpaceStatusBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSpaceStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      public eye.Comm.NameSpaceStatusOrBuilder getSpaceStatusOrBuilder() {
+        if (spaceStatusBuilder_ != null) {
+          return spaceStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return spaceStatus_;
+        }
+      }
+      /**
+       * <code>optional .NameSpaceStatus space_status = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.NameSpaceStatus, eye.Comm.NameSpaceStatus.Builder, eye.Comm.NameSpaceStatusOrBuilder> 
+          getSpaceStatusFieldBuilder() {
+        if (spaceStatusBuilder_ == null) {
+          spaceStatusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.NameSpaceStatus, eye.Comm.NameSpaceStatus.Builder, eye.Comm.NameSpaceStatusOrBuilder>(
+                  spaceStatus_,
+                  getParentForChildren(),
+                  isClean());
+          spaceStatus_ = null;
+        }
+        return spaceStatusBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Payload)
+    }
+
+    static {
+      defaultInstance = new Payload(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Payload)
+  }
+
+  public interface RequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .Header header = 1;
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    boolean hasHeader();
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    eye.Comm.Header getHeader();
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    eye.Comm.HeaderOrBuilder getHeaderOrBuilder();
+
+    // required .Payload body = 2;
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    boolean hasBody();
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    eye.Comm.Payload getBody();
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    eye.Comm.PayloadOrBuilder getBodyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Request}
+   */
+  public static final class Request extends
+      com.google.protobuf.GeneratedMessage
+      implements RequestOrBuilder {
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Request(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Request defaultInstance;
+    public static Request getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Request getDefaultInstanceForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return defaultInstance;
     }
 
@@ -21149,7 +21590,11 @@ public final class Comm {
         getUnknownFields() {
       return this.unknownFields;
     }
+<<<<<<< HEAD
     private SignIn(
+=======
+    private Request(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21173,6 +21618,7 @@ public final class Comm {
               break;
             }
             case 10: {
+<<<<<<< HEAD
               bitField0_ |= 0x00000001;
               userName_ = input.readBytes();
               break;
@@ -21180,6 +21626,31 @@ public final class Comm {
             case 18: {
               bitField0_ |= 0x00000002;
               password_ = input.readBytes();
+=======
+              eye.Comm.Header.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = header_.toBuilder();
+              }
+              header_ = input.readMessage(eye.Comm.Header.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(header_);
+                header_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              eye.Comm.Payload.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = body_.toBuilder();
+              }
+              body_ = input.readMessage(eye.Comm.Payload.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(body_);
+                body_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
           }
@@ -21196,11 +21667,16 @@ public final class Comm {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_SignIn_descriptor;
+=======
+      return eye.Comm.internal_static_Request_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_SignIn_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               eye.Comm.SignIn.class, eye.Comm.SignIn.Builder.class);
@@ -21213,15 +21689,34 @@ public final class Comm {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new SignIn(input, extensionRegistry);
+=======
+      return eye.Comm.internal_static_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              eye.Comm.Request.class, eye.Comm.Request.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Request> PARSER =
+        new com.google.protobuf.AbstractParser<Request>() {
+      public Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Request(input, extensionRegistry);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
     };
 
     @java.lang.Override
+<<<<<<< HEAD
     public com.google.protobuf.Parser<SignIn> getParserForType() {
+=======
+    public com.google.protobuf.Parser<Request> getParserForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return PARSER;
     }
 
     private int bitField0_;
+<<<<<<< HEAD
     // required string user_name = 1;
     public static final int USER_NAME_FIELD_NUMBER = 1;
     private java.lang.Object userName_;
@@ -21311,17 +21806,82 @@ public final class Comm {
     private void initFields() {
       userName_ = "";
       password_ = "";
+=======
+    // required .Header header = 1;
+    public static final int HEADER_FIELD_NUMBER = 1;
+    private eye.Comm.Header header_;
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    public boolean hasHeader() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    public eye.Comm.Header getHeader() {
+      return header_;
+    }
+    /**
+     * <code>required .Header header = 1;</code>
+     */
+    public eye.Comm.HeaderOrBuilder getHeaderOrBuilder() {
+      return header_;
+    }
+
+    // required .Payload body = 2;
+    public static final int BODY_FIELD_NUMBER = 2;
+    private eye.Comm.Payload body_;
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    public boolean hasBody() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    public eye.Comm.Payload getBody() {
+      return body_;
+    }
+    /**
+     * <code>required .Payload body = 2;</code>
+     */
+    public eye.Comm.PayloadOrBuilder getBodyOrBuilder() {
+      return body_;
+    }
+
+    private void initFields() {
+      header_ = eye.Comm.Header.getDefaultInstance();
+      body_ = eye.Comm.Payload.getDefaultInstance();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+<<<<<<< HEAD
       if (!hasUserName()) {
         memoizedIsInitialized = 0;
         return false;
       }
       if (!hasPassword()) {
+=======
+      if (!hasHeader()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasBody()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getHeader().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getBody().isInitialized()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         memoizedIsInitialized = 0;
         return false;
       }
@@ -21333,10 +21893,17 @@ public final class Comm {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+<<<<<<< HEAD
         output.writeBytes(1, getUserNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getPasswordBytes());
+=======
+        output.writeMessage(1, header_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, body_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -21349,11 +21916,19 @@ public final class Comm {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
+<<<<<<< HEAD
           .computeBytesSize(1, getUserNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getPasswordBytes());
+=======
+          .computeMessageSize(1, header_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, body_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -21367,53 +21942,93 @@ public final class Comm {
       return super.writeReplace();
     }
 
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
     public static eye.Comm.SignIn parseDelimitedFrom(
+=======
+    public static eye.Comm.Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static eye.Comm.Request parseDelimitedFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignIn parseFrom(
+=======
+    public static eye.Comm.Request parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21422,7 +22037,11 @@ public final class Comm {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
+<<<<<<< HEAD
     public static Builder newBuilder(eye.Comm.SignIn prototype) {
+=======
+    public static Builder newBuilder(eye.Comm.Request prototype) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -21434,6 +22053,7 @@ public final class Comm {
       return builder;
     }
     /**
+<<<<<<< HEAD
      * Protobuf type {@code SignIn}
      *
      * <pre>
@@ -21446,16 +22066,35 @@ public final class Comm {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return eye.Comm.internal_static_SignIn_descriptor;
+=======
+     * Protobuf type {@code Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements eye.Comm.RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return eye.Comm.internal_static_Request_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_SignIn_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 eye.Comm.SignIn.class, eye.Comm.SignIn.Builder.class);
       }
 
       // Construct using eye.Comm.SignIn.newBuilder()
+=======
+        return eye.Comm.internal_static_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                eye.Comm.Request.class, eye.Comm.Request.Builder.class);
+      }
+
+      // Construct using eye.Comm.Request.newBuilder()
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -21467,6 +22106,11 @@ public final class Comm {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+<<<<<<< HEAD
+=======
+          getHeaderFieldBuilder();
+          getBodyFieldBuilder();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
       }
       private static Builder create() {
@@ -21475,9 +22119,23 @@ public final class Comm {
 
       public Builder clear() {
         super.clear();
+<<<<<<< HEAD
         userName_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         password_ = "";
+=======
+        if (headerBuilder_ == null) {
+          header_ = eye.Comm.Header.getDefaultInstance();
+        } else {
+          headerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (bodyBuilder_ == null) {
+          body_ = eye.Comm.Payload.getDefaultInstance();
+        } else {
+          bodyBuilder_.clear();
+        }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -21488,6 +22146,7 @@ public final class Comm {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_SignIn_descriptor;
       }
 
@@ -21497,38 +22156,76 @@ public final class Comm {
 
       public eye.Comm.SignIn build() {
         eye.Comm.SignIn result = buildPartial();
+=======
+        return eye.Comm.internal_static_Request_descriptor;
+      }
+
+      public eye.Comm.Request getDefaultInstanceForType() {
+        return eye.Comm.Request.getDefaultInstance();
+      }
+
+      public eye.Comm.Request build() {
+        eye.Comm.Request result = buildPartial();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
+<<<<<<< HEAD
       public eye.Comm.SignIn buildPartial() {
         eye.Comm.SignIn result = new eye.Comm.SignIn(this);
+=======
+      public eye.Comm.Request buildPartial() {
+        eye.Comm.Request result = new eye.Comm.Request(this);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
+<<<<<<< HEAD
         result.userName_ = userName_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
         result.password_ = password_;
+=======
+        if (headerBuilder_ == null) {
+          result.header_ = header_;
+        } else {
+          result.header_ = headerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (bodyBuilder_ == null) {
+          result.body_ = body_;
+        } else {
+          result.body_ = bodyBuilder_.build();
+        }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
+<<<<<<< HEAD
         if (other instanceof eye.Comm.SignIn) {
           return mergeFrom((eye.Comm.SignIn)other);
+=======
+        if (other instanceof eye.Comm.Request) {
+          return mergeFrom((eye.Comm.Request)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
+<<<<<<< HEAD
       public Builder mergeFrom(eye.Comm.SignIn other) {
         if (other == eye.Comm.SignIn.getDefaultInstance()) return this;
         if (other.hasUserName()) {
@@ -21540,17 +22237,42 @@ public final class Comm {
           bitField0_ |= 0x00000002;
           password_ = other.password_;
           onChanged();
+=======
+      public Builder mergeFrom(eye.Comm.Request other) {
+        if (other == eye.Comm.Request.getDefaultInstance()) return this;
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
+        }
+        if (other.hasBody()) {
+          mergeBody(other.getBody());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+<<<<<<< HEAD
         if (!hasUserName()) {
           
           return false;
         }
         if (!hasPassword()) {
+=======
+        if (!hasHeader()) {
+          
+          return false;
+        }
+        if (!hasBody()) {
+          
+          return false;
+        }
+        if (!getHeader().isInitialized()) {
+          
+          return false;
+        }
+        if (!getBody().isInitialized()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           
           return false;
         }
@@ -21561,11 +22283,19 @@ public final class Comm {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
+<<<<<<< HEAD
         eye.Comm.SignIn parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (eye.Comm.SignIn) e.getUnfinishedMessage();
+=======
+        eye.Comm.Request parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (eye.Comm.Request) e.getUnfinishedMessage();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -21576,6 +22306,7 @@ public final class Comm {
       }
       private int bitField0_;
 
+<<<<<<< HEAD
       // required string user_name = 1;
       private java.lang.Object userName_ = "";
       /**
@@ -21802,6 +22533,300 @@ public final class Comm {
     }
 
     public SignUp getDefaultInstanceForType() {
+=======
+      // required .Header header = 1;
+      private eye.Comm.Header header_ = eye.Comm.Header.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Header, eye.Comm.Header.Builder, eye.Comm.HeaderOrBuilder> headerBuilder_;
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public boolean hasHeader() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public eye.Comm.Header getHeader() {
+        if (headerBuilder_ == null) {
+          return header_;
+        } else {
+          return headerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public Builder setHeader(eye.Comm.Header value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          header_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public Builder setHeader(
+          eye.Comm.Header.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public Builder mergeHeader(eye.Comm.Header value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              header_ != eye.Comm.Header.getDefaultInstance()) {
+            header_ =
+              eye.Comm.Header.newBuilder(header_).mergeFrom(value).buildPartial();
+          } else {
+            header_ = value;
+          }
+          onChanged();
+        } else {
+          headerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          header_ = eye.Comm.Header.getDefaultInstance();
+          onChanged();
+        } else {
+          headerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public eye.Comm.Header.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      public eye.Comm.HeaderOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          return header_;
+        }
+      }
+      /**
+       * <code>required .Header header = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Header, eye.Comm.Header.Builder, eye.Comm.HeaderOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.Header, eye.Comm.Header.Builder, eye.Comm.HeaderOrBuilder>(
+                  header_,
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+
+      // required .Payload body = 2;
+      private eye.Comm.Payload body_ = eye.Comm.Payload.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Payload, eye.Comm.Payload.Builder, eye.Comm.PayloadOrBuilder> bodyBuilder_;
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public boolean hasBody() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public eye.Comm.Payload getBody() {
+        if (bodyBuilder_ == null) {
+          return body_;
+        } else {
+          return bodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public Builder setBody(eye.Comm.Payload value) {
+        if (bodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          body_ = value;
+          onChanged();
+        } else {
+          bodyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public Builder setBody(
+          eye.Comm.Payload.Builder builderForValue) {
+        if (bodyBuilder_ == null) {
+          body_ = builderForValue.build();
+          onChanged();
+        } else {
+          bodyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public Builder mergeBody(eye.Comm.Payload value) {
+        if (bodyBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              body_ != eye.Comm.Payload.getDefaultInstance()) {
+            body_ =
+              eye.Comm.Payload.newBuilder(body_).mergeFrom(value).buildPartial();
+          } else {
+            body_ = value;
+          }
+          onChanged();
+        } else {
+          bodyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public Builder clearBody() {
+        if (bodyBuilder_ == null) {
+          body_ = eye.Comm.Payload.getDefaultInstance();
+          onChanged();
+        } else {
+          bodyBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public eye.Comm.Payload.Builder getBodyBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      public eye.Comm.PayloadOrBuilder getBodyOrBuilder() {
+        if (bodyBuilder_ != null) {
+          return bodyBuilder_.getMessageOrBuilder();
+        } else {
+          return body_;
+        }
+      }
+      /**
+       * <code>required .Payload body = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Payload, eye.Comm.Payload.Builder, eye.Comm.PayloadOrBuilder> 
+          getBodyFieldBuilder() {
+        if (bodyBuilder_ == null) {
+          bodyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.Payload, eye.Comm.Payload.Builder, eye.Comm.PayloadOrBuilder>(
+                  body_,
+                  getParentForChildren(),
+                  isClean());
+          body_ = null;
+        }
+        return bodyBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Request)
+    }
+
+    static {
+      defaultInstance = new Request(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Request)
+  }
+
+  public interface HeartbeatOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string node_id = 1;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    boolean hasNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    java.lang.String getNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNodeIdBytes();
+
+    // required int64 time_ref = 2;
+    /**
+     * <code>required int64 time_ref = 2;</code>
+     */
+    boolean hasTimeRef();
+    /**
+     * <code>required int64 time_ref = 2;</code>
+     */
+    long getTimeRef();
+  }
+  /**
+   * Protobuf type {@code Heartbeat}
+   */
+  public static final class Heartbeat extends
+      com.google.protobuf.GeneratedMessage
+      implements HeartbeatOrBuilder {
+    // Use Heartbeat.newBuilder() to construct.
+    private Heartbeat(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Heartbeat(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Heartbeat defaultInstance;
+    public static Heartbeat getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Heartbeat getDefaultInstanceForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return defaultInstance;
     }
 
@@ -21811,7 +22836,11 @@ public final class Comm {
         getUnknownFields() {
       return this.unknownFields;
     }
+<<<<<<< HEAD
     private SignUp(
+=======
+    private Heartbeat(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -21836,6 +22865,7 @@ public final class Comm {
             }
             case 10: {
               bitField0_ |= 0x00000001;
+<<<<<<< HEAD
               fullName_ = input.readBytes();
               break;
             }
@@ -21847,6 +22877,14 @@ public final class Comm {
             case 26: {
               bitField0_ |= 0x00000004;
               password_ = input.readBytes();
+=======
+              nodeId_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              timeRef_ = input.readInt64();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
           }
@@ -21863,11 +22901,16 @@ public final class Comm {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_SignUp_descriptor;
+=======
+      return eye.Comm.internal_static_Heartbeat_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_SignUp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               eye.Comm.SignUp.class, eye.Comm.SignUp.Builder.class);
@@ -21880,15 +22923,34 @@ public final class Comm {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new SignUp(input, extensionRegistry);
+=======
+      return eye.Comm.internal_static_Heartbeat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              eye.Comm.Heartbeat.class, eye.Comm.Heartbeat.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Heartbeat> PARSER =
+        new com.google.protobuf.AbstractParser<Heartbeat>() {
+      public Heartbeat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Heartbeat(input, extensionRegistry);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
     };
 
     @java.lang.Override
+<<<<<<< HEAD
     public com.google.protobuf.Parser<SignUp> getParserForType() {
+=======
+    public com.google.protobuf.Parser<Heartbeat> getParserForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return PARSER;
     }
 
     private int bitField0_;
+<<<<<<< HEAD
     // required string full_name = 1;
     public static final int FULL_NAME_FIELD_NUMBER = 1;
     private java.lang.Object fullName_;
@@ -21903,6 +22965,22 @@ public final class Comm {
      */
     public java.lang.String getFullName() {
       java.lang.Object ref = fullName_;
+=======
+    // required string node_id = 1;
+    public static final int NODE_ID_FIELD_NUMBER = 1;
+    private java.lang.Object nodeId_;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public boolean hasNodeId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public java.lang.String getNodeId() {
+      java.lang.Object ref = nodeId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -21910,28 +22988,45 @@ public final class Comm {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
+<<<<<<< HEAD
           fullName_ = s;
+=======
+          nodeId_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         return s;
       }
     }
     /**
+<<<<<<< HEAD
      * <code>required string full_name = 1;</code>
      */
     public com.google.protobuf.ByteString
         getFullNameBytes() {
       java.lang.Object ref = fullName_;
+=======
+     * <code>required string node_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNodeIdBytes() {
+      java.lang.Object ref = nodeId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
+<<<<<<< HEAD
         fullName_ = b;
+=======
+        nodeId_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
+<<<<<<< HEAD
     // required string user_name = 2;
     public static final int USER_NAME_FIELD_NUMBER = 2;
     private java.lang.Object userName_;
@@ -22022,12 +23117,34 @@ public final class Comm {
       fullName_ = "";
       userName_ = "";
       password_ = "";
+=======
+    // required int64 time_ref = 2;
+    public static final int TIME_REF_FIELD_NUMBER = 2;
+    private long timeRef_;
+    /**
+     * <code>required int64 time_ref = 2;</code>
+     */
+    public boolean hasTimeRef() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int64 time_ref = 2;</code>
+     */
+    public long getTimeRef() {
+      return timeRef_;
+    }
+
+    private void initFields() {
+      nodeId_ = "";
+      timeRef_ = 0L;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+<<<<<<< HEAD
       if (!hasFullName()) {
         memoizedIsInitialized = 0;
         return false;
@@ -22037,6 +23154,13 @@ public final class Comm {
         return false;
       }
       if (!hasPassword()) {
+=======
+      if (!hasNodeId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTimeRef()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         memoizedIsInitialized = 0;
         return false;
       }
@@ -22048,6 +23172,7 @@ public final class Comm {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+<<<<<<< HEAD
         output.writeBytes(1, getFullNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -22055,6 +23180,12 @@ public final class Comm {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getPasswordBytes());
+=======
+        output.writeBytes(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, timeRef_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -22067,6 +23198,7 @@ public final class Comm {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
+<<<<<<< HEAD
           .computeBytesSize(1, getFullNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -22076,6 +23208,13 @@ public final class Comm {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getPasswordBytes());
+=======
+          .computeBytesSize(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, timeRef_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -22089,53 +23228,93 @@ public final class Comm {
       return super.writeReplace();
     }
 
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
     public static eye.Comm.SignUp parseDelimitedFrom(
+=======
+    public static eye.Comm.Heartbeat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static eye.Comm.Heartbeat parseDelimitedFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
+<<<<<<< HEAD
     public static eye.Comm.SignUp parseFrom(
+=======
+    public static eye.Comm.Heartbeat parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22144,7 +23323,11 @@ public final class Comm {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
+<<<<<<< HEAD
     public static Builder newBuilder(eye.Comm.SignUp prototype) {
+=======
+    public static Builder newBuilder(eye.Comm.Heartbeat prototype) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -22156,6 +23339,7 @@ public final class Comm {
       return builder;
     }
     /**
+<<<<<<< HEAD
      * Protobuf type {@code SignUp}
      */
     public static final class Builder extends
@@ -22164,16 +23348,35 @@ public final class Comm {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return eye.Comm.internal_static_SignUp_descriptor;
+=======
+     * Protobuf type {@code Heartbeat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements eye.Comm.HeartbeatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return eye.Comm.internal_static_Heartbeat_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_SignUp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 eye.Comm.SignUp.class, eye.Comm.SignUp.Builder.class);
       }
 
       // Construct using eye.Comm.SignUp.newBuilder()
+=======
+        return eye.Comm.internal_static_Heartbeat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                eye.Comm.Heartbeat.class, eye.Comm.Heartbeat.Builder.class);
+      }
+
+      // Construct using eye.Comm.Heartbeat.newBuilder()
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22193,12 +23396,19 @@ public final class Comm {
 
       public Builder clear() {
         super.clear();
+<<<<<<< HEAD
         fullName_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         userName_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         password_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+=======
+        nodeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        timeRef_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return this;
       }
 
@@ -22208,6 +23418,7 @@ public final class Comm {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_SignUp_descriptor;
       }
 
@@ -22217,19 +23428,36 @@ public final class Comm {
 
       public eye.Comm.SignUp build() {
         eye.Comm.SignUp result = buildPartial();
+=======
+        return eye.Comm.internal_static_Heartbeat_descriptor;
+      }
+
+      public eye.Comm.Heartbeat getDefaultInstanceForType() {
+        return eye.Comm.Heartbeat.getDefaultInstance();
+      }
+
+      public eye.Comm.Heartbeat build() {
+        eye.Comm.Heartbeat result = buildPartial();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
+<<<<<<< HEAD
       public eye.Comm.SignUp buildPartial() {
         eye.Comm.SignUp result = new eye.Comm.SignUp(this);
+=======
+      public eye.Comm.Heartbeat buildPartial() {
+        eye.Comm.Heartbeat result = new eye.Comm.Heartbeat(this);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
+<<<<<<< HEAD
         result.fullName_ = fullName_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
@@ -22239,20 +23467,33 @@ public final class Comm {
           to_bitField0_ |= 0x00000004;
         }
         result.password_ = password_;
+=======
+        result.nodeId_ = nodeId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.timeRef_ = timeRef_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
+<<<<<<< HEAD
         if (other instanceof eye.Comm.SignUp) {
           return mergeFrom((eye.Comm.SignUp)other);
+=======
+        if (other instanceof eye.Comm.Heartbeat) {
+          return mergeFrom((eye.Comm.Heartbeat)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
+<<<<<<< HEAD
       public Builder mergeFrom(eye.Comm.SignUp other) {
         if (other == eye.Comm.SignUp.getDefaultInstance()) return this;
         if (other.hasFullName()) {
@@ -22269,12 +23510,24 @@ public final class Comm {
           bitField0_ |= 0x00000004;
           password_ = other.password_;
           onChanged();
+=======
+      public Builder mergeFrom(eye.Comm.Heartbeat other) {
+        if (other == eye.Comm.Heartbeat.getDefaultInstance()) return this;
+        if (other.hasNodeId()) {
+          bitField0_ |= 0x00000001;
+          nodeId_ = other.nodeId_;
+          onChanged();
+        }
+        if (other.hasTimeRef()) {
+          setTimeRef(other.getTimeRef());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+<<<<<<< HEAD
         if (!hasFullName()) {
           
           return false;
@@ -22284,6 +23537,13 @@ public final class Comm {
           return false;
         }
         if (!hasPassword()) {
+=======
+        if (!hasNodeId()) {
+          
+          return false;
+        }
+        if (!hasTimeRef()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           
           return false;
         }
@@ -22294,6 +23554,7 @@ public final class Comm {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
+<<<<<<< HEAD
         eye.Comm.SignUp parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -22400,63 +23661,140 @@ public final class Comm {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           userName_ = s;
+=======
+        eye.Comm.Heartbeat parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (eye.Comm.Heartbeat) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required string node_id = 1;
+      private java.lang.Object nodeId_ = "";
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public boolean hasNodeId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public java.lang.String getNodeId() {
+        java.lang.Object ref = nodeId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          nodeId_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>required string user_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
         java.lang.Object ref = userName_;
+=======
+       * <code>required string node_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNodeIdBytes() {
+        java.lang.Object ref = nodeId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
+<<<<<<< HEAD
           userName_ = b;
+=======
+          nodeId_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>required string user_name = 2;</code>
        */
       public Builder setUserName(
+=======
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeId(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
+<<<<<<< HEAD
   bitField0_ |= 0x00000002;
         userName_ = value;
+=======
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>required string user_name = 2;</code>
        */
       public Builder clearUserName() {
         bitField0_ = (bitField0_ & ~0x00000002);
         userName_ = getDefaultInstance().getUserName();
+=======
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder clearNodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nodeId_ = getDefaultInstance().getNodeId();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>required string user_name = 2;</code>
        */
       public Builder setUserNameBytes(
+=======
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeIdBytes(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
+<<<<<<< HEAD
   bitField0_ |= 0x00000002;
         userName_ = value;
+=======
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
 
+<<<<<<< HEAD
       // required string password = 3;
       private java.lang.Object password_ = "";
       /**
@@ -22514,10 +23852,33 @@ public final class Comm {
       public Builder clearPassword() {
         bitField0_ = (bitField0_ & ~0x00000004);
         password_ = getDefaultInstance().getPassword();
+=======
+      // required int64 time_ref = 2;
+      private long timeRef_ ;
+      /**
+       * <code>required int64 time_ref = 2;</code>
+       */
+      public boolean hasTimeRef() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int64 time_ref = 2;</code>
+       */
+      public long getTimeRef() {
+        return timeRef_;
+      }
+      /**
+       * <code>required int64 time_ref = 2;</code>
+       */
+      public Builder setTimeRef(long value) {
+        bitField0_ |= 0x00000002;
+        timeRef_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>required string password = 3;</code>
        */
       public Builder setPasswordBytes(
@@ -22527,10 +23888,18 @@ public final class Comm {
   }
   bitField0_ |= 0x00000004;
         password_ = value;
+=======
+       * <code>required int64 time_ref = 2;</code>
+       */
+      public Builder clearTimeRef() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timeRef_ = 0L;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
 
+<<<<<<< HEAD
       // @@protoc_insertion_point(builder_scope:SignUp)
     }
 
@@ -22589,6 +23958,66 @@ public final class Comm {
     }
 
     public RequestList getDefaultInstanceForType() {
+=======
+      // @@protoc_insertion_point(builder_scope:Heartbeat)
+    }
+
+    static {
+      defaultInstance = new Heartbeat(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Heartbeat)
+  }
+
+  public interface NetworkOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string node_id = 1;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    boolean hasNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    java.lang.String getNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNodeIdBytes();
+
+    // required .Network.NetworkAction action = 2;
+    /**
+     * <code>required .Network.NetworkAction action = 2;</code>
+     */
+    boolean hasAction();
+    /**
+     * <code>required .Network.NetworkAction action = 2;</code>
+     */
+    eye.Comm.Network.NetworkAction getAction();
+  }
+  /**
+   * Protobuf type {@code Network}
+   */
+  public static final class Network extends
+      com.google.protobuf.GeneratedMessage
+      implements NetworkOrBuilder {
+    // Use Network.newBuilder() to construct.
+    private Network(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Network(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Network defaultInstance;
+    public static Network getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Network getDefaultInstanceForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return defaultInstance;
     }
 
@@ -22598,7 +24027,11 @@ public final class Comm {
         getUnknownFields() {
       return this.unknownFields;
     }
+<<<<<<< HEAD
     private RequestList(
+=======
+    private Network(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22622,11 +24055,27 @@ public final class Comm {
               break;
             }
             case 10: {
+<<<<<<< HEAD
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 courseList_ = new java.util.ArrayList<eye.Comm.GetCourse>();
                 mutable_bitField0_ |= 0x00000001;
               }
               courseList_.add(input.readMessage(eye.Comm.GetCourse.PARSER, extensionRegistry));
+=======
+              bitField0_ |= 0x00000001;
+              nodeId_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              eye.Comm.Network.NetworkAction value = eye.Comm.Network.NetworkAction.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                action_ = value;
+              }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
           }
@@ -22637,20 +24086,28 @@ public final class Comm {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+<<<<<<< HEAD
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           courseList_ = java.util.Collections.unmodifiableList(courseList_);
         }
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_RequestList_descriptor;
+=======
+      return eye.Comm.internal_static_Network_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_RequestList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               eye.Comm.RequestList.class, eye.Comm.RequestList.Builder.class);
@@ -22663,10 +24120,25 @@ public final class Comm {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new RequestList(input, extensionRegistry);
+=======
+      return eye.Comm.internal_static_Network_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              eye.Comm.Network.class, eye.Comm.Network.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Network> PARSER =
+        new com.google.protobuf.AbstractParser<Network>() {
+      public Network parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Network(input, extensionRegistry);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
     };
 
     @java.lang.Override
+<<<<<<< HEAD
     public com.google.protobuf.Parser<RequestList> getParserForType() {
       return PARSER;
     }
@@ -22709,17 +24181,214 @@ public final class Comm {
 
     private void initFields() {
       courseList_ = java.util.Collections.emptyList();
+=======
+    public com.google.protobuf.Parser<Network> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code Network.NetworkAction}
+     */
+    public enum NetworkAction
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>NODEJOIN = 1;</code>
+       */
+      NODEJOIN(0, 1),
+      /**
+       * <code>NODELEAVE = 2;</code>
+       */
+      NODELEAVE(1, 2),
+      /**
+       * <code>NODEDEAD = 3;</code>
+       */
+      NODEDEAD(2, 3),
+      /**
+       * <code>CREATEMAP = 55;</code>
+       */
+      CREATEMAP(3, 55),
+      /**
+       * <code>ANNOUNCE = 56;</code>
+       */
+      ANNOUNCE(4, 56),
+      /**
+       * <code>SHUTDOWN = 999;</code>
+       */
+      SHUTDOWN(5, 999),
+      ;
+
+      /**
+       * <code>NODEJOIN = 1;</code>
+       */
+      public static final int NODEJOIN_VALUE = 1;
+      /**
+       * <code>NODELEAVE = 2;</code>
+       */
+      public static final int NODELEAVE_VALUE = 2;
+      /**
+       * <code>NODEDEAD = 3;</code>
+       */
+      public static final int NODEDEAD_VALUE = 3;
+      /**
+       * <code>CREATEMAP = 55;</code>
+       */
+      public static final int CREATEMAP_VALUE = 55;
+      /**
+       * <code>ANNOUNCE = 56;</code>
+       */
+      public static final int ANNOUNCE_VALUE = 56;
+      /**
+       * <code>SHUTDOWN = 999;</code>
+       */
+      public static final int SHUTDOWN_VALUE = 999;
+
+
+      public final int getNumber() { return value; }
+
+      public static NetworkAction valueOf(int value) {
+        switch (value) {
+          case 1: return NODEJOIN;
+          case 2: return NODELEAVE;
+          case 3: return NODEDEAD;
+          case 55: return CREATEMAP;
+          case 56: return ANNOUNCE;
+          case 999: return SHUTDOWN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<NetworkAction>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<NetworkAction>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<NetworkAction>() {
+              public NetworkAction findValueByNumber(int number) {
+                return NetworkAction.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return eye.Comm.Network.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final NetworkAction[] VALUES = values();
+
+      public static NetworkAction valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private NetworkAction(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:Network.NetworkAction)
+    }
+
+    private int bitField0_;
+    // required string node_id = 1;
+    public static final int NODE_ID_FIELD_NUMBER = 1;
+    private java.lang.Object nodeId_;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public boolean hasNodeId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public java.lang.String getNodeId() {
+      java.lang.Object ref = nodeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          nodeId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNodeIdBytes() {
+      java.lang.Object ref = nodeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required .Network.NetworkAction action = 2;
+    public static final int ACTION_FIELD_NUMBER = 2;
+    private eye.Comm.Network.NetworkAction action_;
+    /**
+     * <code>required .Network.NetworkAction action = 2;</code>
+     */
+    public boolean hasAction() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .Network.NetworkAction action = 2;</code>
+     */
+    public eye.Comm.Network.NetworkAction getAction() {
+      return action_;
+    }
+
+    private void initFields() {
+      nodeId_ = "";
+      action_ = eye.Comm.Network.NetworkAction.NODEJOIN;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+<<<<<<< HEAD
       for (int i = 0; i < getCourseListCount(); i++) {
         if (!getCourseList(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
+=======
+      if (!hasNodeId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAction()) {
+        memoizedIsInitialized = 0;
+        return false;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       memoizedIsInitialized = 1;
       return true;
@@ -22728,8 +24397,16 @@ public final class Comm {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+<<<<<<< HEAD
       for (int i = 0; i < courseList_.size(); i++) {
         output.writeMessage(1, courseList_.get(i));
+=======
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, action_.getNumber());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -22740,9 +24417,19 @@ public final class Comm {
       if (size != -1) return size;
 
       size = 0;
+<<<<<<< HEAD
       for (int i = 0; i < courseList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, courseList_.get(i));
+=======
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, action_.getNumber());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -22756,53 +24443,93 @@ public final class Comm {
       return super.writeReplace();
     }
 
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
     public static eye.Comm.RequestList parseDelimitedFrom(
+=======
+    public static eye.Comm.Network parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static eye.Comm.Network parseDelimitedFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
+<<<<<<< HEAD
     public static eye.Comm.RequestList parseFrom(
+=======
+    public static eye.Comm.Network parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22811,7 +24538,11 @@ public final class Comm {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
+<<<<<<< HEAD
     public static Builder newBuilder(eye.Comm.RequestList prototype) {
+=======
+    public static Builder newBuilder(eye.Comm.Network prototype) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -22823,6 +24554,7 @@ public final class Comm {
       return builder;
     }
     /**
+<<<<<<< HEAD
      * Protobuf type {@code RequestList}
      */
     public static final class Builder extends
@@ -22831,16 +24563,35 @@ public final class Comm {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return eye.Comm.internal_static_RequestList_descriptor;
+=======
+     * Protobuf type {@code Network}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements eye.Comm.NetworkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return eye.Comm.internal_static_Network_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_RequestList_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 eye.Comm.RequestList.class, eye.Comm.RequestList.Builder.class);
       }
 
       // Construct using eye.Comm.RequestList.newBuilder()
+=======
+        return eye.Comm.internal_static_Network_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                eye.Comm.Network.class, eye.Comm.Network.Builder.class);
+      }
+
+      // Construct using eye.Comm.Network.newBuilder()
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -22852,7 +24603,10 @@ public final class Comm {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+<<<<<<< HEAD
           getCourseListFieldBuilder();
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
       }
       private static Builder create() {
@@ -22861,12 +24615,19 @@ public final class Comm {
 
       public Builder clear() {
         super.clear();
+<<<<<<< HEAD
         if (courseListBuilder_ == null) {
           courseList_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           courseListBuilder_.clear();
         }
+=======
+        nodeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        action_ = eye.Comm.Network.NetworkAction.NODEJOIN;
+        bitField0_ = (bitField0_ & ~0x00000002);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return this;
       }
 
@@ -22876,6 +24637,7 @@ public final class Comm {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_RequestList_descriptor;
       }
 
@@ -22885,12 +24647,24 @@ public final class Comm {
 
       public eye.Comm.RequestList build() {
         eye.Comm.RequestList result = buildPartial();
+=======
+        return eye.Comm.internal_static_Network_descriptor;
+      }
+
+      public eye.Comm.Network getDefaultInstanceForType() {
+        return eye.Comm.Network.getDefaultInstance();
+      }
+
+      public eye.Comm.Network build() {
+        eye.Comm.Network result = buildPartial();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
+<<<<<<< HEAD
       public eye.Comm.RequestList buildPartial() {
         eye.Comm.RequestList result = new eye.Comm.RequestList(this);
         int from_bitField0_ = bitField0_;
@@ -22903,19 +24677,40 @@ public final class Comm {
         } else {
           result.courseList_ = courseListBuilder_.build();
         }
+=======
+      public eye.Comm.Network buildPartial() {
+        eye.Comm.Network result = new eye.Comm.Network(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.nodeId_ = nodeId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.action_ = action_;
+        result.bitField0_ = to_bitField0_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
+<<<<<<< HEAD
         if (other instanceof eye.Comm.RequestList) {
           return mergeFrom((eye.Comm.RequestList)other);
+=======
+        if (other instanceof eye.Comm.Network) {
+          return mergeFrom((eye.Comm.Network)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
+<<<<<<< HEAD
       public Builder mergeFrom(eye.Comm.RequestList other) {
         if (other == eye.Comm.RequestList.getDefaultInstance()) return this;
         if (courseListBuilder_ == null) {
@@ -22943,17 +24738,38 @@ public final class Comm {
               courseListBuilder_.addAllMessages(other.courseList_);
             }
           }
+=======
+      public Builder mergeFrom(eye.Comm.Network other) {
+        if (other == eye.Comm.Network.getDefaultInstance()) return this;
+        if (other.hasNodeId()) {
+          bitField0_ |= 0x00000001;
+          nodeId_ = other.nodeId_;
+          onChanged();
+        }
+        if (other.hasAction()) {
+          setAction(other.getAction());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+<<<<<<< HEAD
         for (int i = 0; i < getCourseListCount(); i++) {
           if (!getCourseList(i).isInitialized()) {
             
             return false;
           }
+=======
+        if (!hasNodeId()) {
+          
+          return false;
+        }
+        if (!hasAction()) {
+          
+          return false;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         return true;
       }
@@ -22962,11 +24778,19 @@ public final class Comm {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
+<<<<<<< HEAD
         eye.Comm.RequestList parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (eye.Comm.RequestList) e.getUnfinishedMessage();
+=======
+        eye.Comm.Network parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (eye.Comm.Network) e.getUnfinishedMessage();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -22977,6 +24801,7 @@ public final class Comm {
       }
       private int bitField0_;
 
+<<<<<<< HEAD
       // repeated .GetCourse CourseList = 1;
       private java.util.List<eye.Comm.GetCourse> courseList_ =
         java.util.Collections.emptyList();
@@ -23290,6 +25115,216 @@ public final class Comm {
     }
 
     public GetCourse getDefaultInstanceForType() {
+=======
+      // required string node_id = 1;
+      private java.lang.Object nodeId_ = "";
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public boolean hasNodeId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public java.lang.String getNodeId() {
+        java.lang.Object ref = nodeId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          nodeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNodeIdBytes() {
+        java.lang.Object ref = nodeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder clearNodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nodeId_ = getDefaultInstance().getNodeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required .Network.NetworkAction action = 2;
+      private eye.Comm.Network.NetworkAction action_ = eye.Comm.Network.NetworkAction.NODEJOIN;
+      /**
+       * <code>required .Network.NetworkAction action = 2;</code>
+       */
+      public boolean hasAction() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .Network.NetworkAction action = 2;</code>
+       */
+      public eye.Comm.Network.NetworkAction getAction() {
+        return action_;
+      }
+      /**
+       * <code>required .Network.NetworkAction action = 2;</code>
+       */
+      public Builder setAction(eye.Comm.Network.NetworkAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .Network.NetworkAction action = 2;</code>
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        action_ = eye.Comm.Network.NetworkAction.NODEJOIN;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Network)
+    }
+
+    static {
+      defaultInstance = new Network(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Network)
+  }
+
+  public interface LeaderElectionOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string node_id = 1;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    boolean hasNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    java.lang.String getNodeId();
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNodeIdBytes();
+
+    // required string ballot_id = 2;
+    /**
+     * <code>required string ballot_id = 2;</code>
+     */
+    boolean hasBallotId();
+    /**
+     * <code>required string ballot_id = 2;</code>
+     */
+    java.lang.String getBallotId();
+    /**
+     * <code>required string ballot_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBallotIdBytes();
+
+    // required string desc = 4;
+    /**
+     * <code>required string desc = 4;</code>
+     */
+    boolean hasDesc();
+    /**
+     * <code>required string desc = 4;</code>
+     */
+    java.lang.String getDesc();
+    /**
+     * <code>required string desc = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescBytes();
+
+    // required .LeaderElection.VoteAction vote = 5;
+    /**
+     * <code>required .LeaderElection.VoteAction vote = 5;</code>
+     */
+    boolean hasVote();
+    /**
+     * <code>required .LeaderElection.VoteAction vote = 5;</code>
+     */
+    eye.Comm.LeaderElection.VoteAction getVote();
+
+    // optional int64 expires = 6;
+    /**
+     * <code>optional int64 expires = 6;</code>
+     */
+    boolean hasExpires();
+    /**
+     * <code>optional int64 expires = 6;</code>
+     */
+    long getExpires();
+  }
+  /**
+   * Protobuf type {@code LeaderElection}
+   */
+  public static final class LeaderElection extends
+      com.google.protobuf.GeneratedMessage
+      implements LeaderElectionOrBuilder {
+    // Use LeaderElection.newBuilder() to construct.
+    private LeaderElection(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private LeaderElection(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final LeaderElection defaultInstance;
+    public static LeaderElection getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public LeaderElection getDefaultInstanceForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return defaultInstance;
     }
 
@@ -23299,7 +25334,11 @@ public final class Comm {
         getUnknownFields() {
       return this.unknownFields;
     }
+<<<<<<< HEAD
     private GetCourse(
+=======
+    private LeaderElection(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -23322,19 +25361,50 @@ public final class Comm {
               }
               break;
             }
+<<<<<<< HEAD
             case 8: {
               bitField0_ |= 0x00000001;
               courseId_ = input.readInt32();
+=======
+            case 10: {
+              bitField0_ |= 0x00000001;
+              nodeId_ = input.readBytes();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
             case 18: {
               bitField0_ |= 0x00000002;
+<<<<<<< HEAD
               courseName_ = input.readBytes();
               break;
             }
             case 26: {
               bitField0_ |= 0x00000004;
               courseDescription_ = input.readBytes();
+=======
+              ballotId_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000004;
+              desc_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+              eye.Comm.LeaderElection.VoteAction value = eye.Comm.LeaderElection.VoteAction.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(5, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                vote_ = value;
+              }
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              expires_ = input.readInt64();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
           }
@@ -23351,11 +25421,16 @@ public final class Comm {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_GetCourse_descriptor;
+=======
+      return eye.Comm.internal_static_LeaderElection_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_GetCourse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               eye.Comm.GetCourse.class, eye.Comm.GetCourse.Builder.class);
@@ -23368,10 +25443,25 @@ public final class Comm {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new GetCourse(input, extensionRegistry);
+=======
+      return eye.Comm.internal_static_LeaderElection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              eye.Comm.LeaderElection.class, eye.Comm.LeaderElection.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<LeaderElection> PARSER =
+        new com.google.protobuf.AbstractParser<LeaderElection>() {
+      public LeaderElection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LeaderElection(input, extensionRegistry);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
     };
 
     @java.lang.Override
+<<<<<<< HEAD
     public com.google.protobuf.Parser<GetCourse> getParserForType() {
       return PARSER;
     }
@@ -23407,6 +25497,135 @@ public final class Comm {
      */
     public java.lang.String getCourseName() {
       java.lang.Object ref = courseName_;
+=======
+    public com.google.protobuf.Parser<LeaderElection> getParserForType() {
+      return PARSER;
+    }
+
+    /**
+     * Protobuf enum {@code LeaderElection.VoteAction}
+     */
+    public enum VoteAction
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ELECTION = 1;</code>
+       */
+      ELECTION(0, 1),
+      /**
+       * <code>NOMINATE = 2;</code>
+       */
+      NOMINATE(1, 2),
+      /**
+       * <code>ABSTAIN = 3;</code>
+       */
+      ABSTAIN(2, 3),
+      /**
+       * <code>DECLAREWINNER = 4;</code>
+       */
+      DECLAREWINNER(3, 4),
+      /**
+       * <code>DECLAREVOID = 5;</code>
+       */
+      DECLAREVOID(4, 5),
+      ;
+
+      /**
+       * <code>ELECTION = 1;</code>
+       */
+      public static final int ELECTION_VALUE = 1;
+      /**
+       * <code>NOMINATE = 2;</code>
+       */
+      public static final int NOMINATE_VALUE = 2;
+      /**
+       * <code>ABSTAIN = 3;</code>
+       */
+      public static final int ABSTAIN_VALUE = 3;
+      /**
+       * <code>DECLAREWINNER = 4;</code>
+       */
+      public static final int DECLAREWINNER_VALUE = 4;
+      /**
+       * <code>DECLAREVOID = 5;</code>
+       */
+      public static final int DECLAREVOID_VALUE = 5;
+
+
+      public final int getNumber() { return value; }
+
+      public static VoteAction valueOf(int value) {
+        switch (value) {
+          case 1: return ELECTION;
+          case 2: return NOMINATE;
+          case 3: return ABSTAIN;
+          case 4: return DECLAREWINNER;
+          case 5: return DECLAREVOID;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<VoteAction>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static com.google.protobuf.Internal.EnumLiteMap<VoteAction>
+          internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<VoteAction>() {
+              public VoteAction findValueByNumber(int number) {
+                return VoteAction.valueOf(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(index);
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return eye.Comm.LeaderElection.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final VoteAction[] VALUES = values();
+
+      public static VoteAction valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int index;
+      private final int value;
+
+      private VoteAction(int index, int value) {
+        this.index = index;
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:LeaderElection.VoteAction)
+    }
+
+    private int bitField0_;
+    // required string node_id = 1;
+    public static final int NODE_ID_FIELD_NUMBER = 1;
+    private java.lang.Object nodeId_;
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public boolean hasNodeId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string node_id = 1;</code>
+     */
+    public java.lang.String getNodeId() {
+      java.lang.Object ref = nodeId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -23414,28 +25633,89 @@ public final class Comm {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          courseName_ = s;
+          nodeId_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>optional string course_name = 2;</code>
+     * <code>required string node_id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getCourseNameBytes() {
-      java.lang.Object ref = courseName_;
+        getNodeIdBytes() {
+      java.lang.Object ref = nodeId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        courseName_ = b;
+        nodeId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
+    // required string ballot_id = 2;
+    public static final int BALLOT_ID_FIELD_NUMBER = 2;
+    private java.lang.Object ballotId_;
+    /**
+     * <code>required string ballot_id = 2;</code>
+     */
+    public boolean hasBallotId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string ballot_id = 2;</code>
+     */
+    public java.lang.String getBallotId() {
+      java.lang.Object ref = ballotId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+<<<<<<< HEAD
+          courseName_ = s;
+=======
+          ballotId_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
+        }
+        return s;
+      }
+    }
+    /**
+<<<<<<< HEAD
+     * <code>optional string course_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCourseNameBytes() {
+      java.lang.Object ref = courseName_;
+=======
+     * <code>required string ballot_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBallotIdBytes() {
+      java.lang.Object ref = ballotId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+<<<<<<< HEAD
+        courseName_ = b;
+=======
+        ballotId_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+<<<<<<< HEAD
     // optional string course_description = 3;
     public static final int COURSE_DESCRIPTION_FIELD_NUMBER = 3;
     private java.lang.Object courseDescription_;
@@ -23450,6 +25730,22 @@ public final class Comm {
      */
     public java.lang.String getCourseDescription() {
       java.lang.Object ref = courseDescription_;
+=======
+    // required string desc = 4;
+    public static final int DESC_FIELD_NUMBER = 4;
+    private java.lang.Object desc_;
+    /**
+     * <code>required string desc = 4;</code>
+     */
+    public boolean hasDesc() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required string desc = 4;</code>
+     */
+    public java.lang.String getDesc() {
+      java.lang.Object ref = desc_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -23457,39 +25753,112 @@ public final class Comm {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
+<<<<<<< HEAD
           courseDescription_ = s;
+=======
+          desc_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         return s;
       }
     }
     /**
+<<<<<<< HEAD
      * <code>optional string course_description = 3;</code>
      */
     public com.google.protobuf.ByteString
         getCourseDescriptionBytes() {
       java.lang.Object ref = courseDescription_;
+=======
+     * <code>required string desc = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescBytes() {
+      java.lang.Object ref = desc_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
+<<<<<<< HEAD
         courseDescription_ = b;
+=======
+        desc_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
+<<<<<<< HEAD
     private void initFields() {
       courseId_ = 0;
       courseName_ = "";
       courseDescription_ = "";
+=======
+    // required .LeaderElection.VoteAction vote = 5;
+    public static final int VOTE_FIELD_NUMBER = 5;
+    private eye.Comm.LeaderElection.VoteAction vote_;
+    /**
+     * <code>required .LeaderElection.VoteAction vote = 5;</code>
+     */
+    public boolean hasVote() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required .LeaderElection.VoteAction vote = 5;</code>
+     */
+    public eye.Comm.LeaderElection.VoteAction getVote() {
+      return vote_;
+    }
+
+    // optional int64 expires = 6;
+    public static final int EXPIRES_FIELD_NUMBER = 6;
+    private long expires_;
+    /**
+     * <code>optional int64 expires = 6;</code>
+     */
+    public boolean hasExpires() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int64 expires = 6;</code>
+     */
+    public long getExpires() {
+      return expires_;
+    }
+
+    private void initFields() {
+      nodeId_ = "";
+      ballotId_ = "";
+      desc_ = "";
+      vote_ = eye.Comm.LeaderElection.VoteAction.ELECTION;
+      expires_ = 0L;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+<<<<<<< HEAD
       if (!hasCourseId()) {
+=======
+      if (!hasNodeId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasBallotId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDesc()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVote()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         memoizedIsInitialized = 0;
         return false;
       }
@@ -23501,6 +25870,7 @@ public final class Comm {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+<<<<<<< HEAD
         output.writeInt32(1, courseId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -23508,6 +25878,21 @@ public final class Comm {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getCourseDescriptionBytes());
+=======
+        output.writeBytes(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getBallotIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(4, getDescBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeEnum(5, vote_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt64(6, expires_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -23520,6 +25905,7 @@ public final class Comm {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
+<<<<<<< HEAD
           .computeInt32Size(1, courseId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -23529,6 +25915,25 @@ public final class Comm {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getCourseDescriptionBytes());
+=======
+          .computeBytesSize(1, getNodeIdBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getBallotIdBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getDescBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, vote_.getNumber());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, expires_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -23542,53 +25947,93 @@ public final class Comm {
       return super.writeReplace();
     }
 
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
     public static eye.Comm.GetCourse parseDelimitedFrom(
+=======
+    public static eye.Comm.LeaderElection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static eye.Comm.LeaderElection parseDelimitedFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
+<<<<<<< HEAD
     public static eye.Comm.GetCourse parseFrom(
+=======
+    public static eye.Comm.LeaderElection parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23597,7 +26042,11 @@ public final class Comm {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
+<<<<<<< HEAD
     public static Builder newBuilder(eye.Comm.GetCourse prototype) {
+=======
+    public static Builder newBuilder(eye.Comm.LeaderElection prototype) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -23609,6 +26058,7 @@ public final class Comm {
       return builder;
     }
     /**
+<<<<<<< HEAD
      * Protobuf type {@code GetCourse}
      */
     public static final class Builder extends
@@ -23617,16 +26067,35 @@ public final class Comm {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return eye.Comm.internal_static_GetCourse_descriptor;
+=======
+     * Protobuf type {@code LeaderElection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements eye.Comm.LeaderElectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return eye.Comm.internal_static_LeaderElection_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_GetCourse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 eye.Comm.GetCourse.class, eye.Comm.GetCourse.Builder.class);
       }
 
       // Construct using eye.Comm.GetCourse.newBuilder()
+=======
+        return eye.Comm.internal_static_LeaderElection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                eye.Comm.LeaderElection.class, eye.Comm.LeaderElection.Builder.class);
+      }
+
+      // Construct using eye.Comm.LeaderElection.newBuilder()
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -23646,12 +26115,25 @@ public final class Comm {
 
       public Builder clear() {
         super.clear();
+<<<<<<< HEAD
         courseId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         courseName_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         courseDescription_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+=======
+        nodeId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ballotId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        desc_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vote_ = eye.Comm.LeaderElection.VoteAction.ELECTION;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        expires_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return this;
       }
 
@@ -23661,6 +26143,7 @@ public final class Comm {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_GetCourse_descriptor;
       }
 
@@ -23670,19 +26153,36 @@ public final class Comm {
 
       public eye.Comm.GetCourse build() {
         eye.Comm.GetCourse result = buildPartial();
+=======
+        return eye.Comm.internal_static_LeaderElection_descriptor;
+      }
+
+      public eye.Comm.LeaderElection getDefaultInstanceForType() {
+        return eye.Comm.LeaderElection.getDefaultInstance();
+      }
+
+      public eye.Comm.LeaderElection build() {
+        eye.Comm.LeaderElection result = buildPartial();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
+<<<<<<< HEAD
       public eye.Comm.GetCourse buildPartial() {
         eye.Comm.GetCourse result = new eye.Comm.GetCourse(this);
+=======
+      public eye.Comm.LeaderElection buildPartial() {
+        eye.Comm.LeaderElection result = new eye.Comm.LeaderElection(this);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
+<<<<<<< HEAD
         result.courseId_ = courseId_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
@@ -23692,20 +26192,45 @@ public final class Comm {
           to_bitField0_ |= 0x00000004;
         }
         result.courseDescription_ = courseDescription_;
+=======
+        result.nodeId_ = nodeId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.ballotId_ = ballotId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.desc_ = desc_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.vote_ = vote_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.expires_ = expires_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
+<<<<<<< HEAD
         if (other instanceof eye.Comm.GetCourse) {
           return mergeFrom((eye.Comm.GetCourse)other);
+=======
+        if (other instanceof eye.Comm.LeaderElection) {
+          return mergeFrom((eye.Comm.LeaderElection)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
+<<<<<<< HEAD
       public Builder mergeFrom(eye.Comm.GetCourse other) {
         if (other == eye.Comm.GetCourse.getDefaultInstance()) return this;
         if (other.hasCourseId()) {
@@ -23721,12 +26246,53 @@ public final class Comm {
           courseDescription_ = other.courseDescription_;
           onChanged();
         }
+=======
+      public Builder mergeFrom(eye.Comm.LeaderElection other) {
+        if (other == eye.Comm.LeaderElection.getDefaultInstance()) return this;
+        if (other.hasNodeId()) {
+          bitField0_ |= 0x00000001;
+          nodeId_ = other.nodeId_;
+          onChanged();
+        }
+        if (other.hasBallotId()) {
+          bitField0_ |= 0x00000002;
+          ballotId_ = other.ballotId_;
+          onChanged();
+        }
+        if (other.hasDesc()) {
+          bitField0_ |= 0x00000004;
+          desc_ = other.desc_;
+          onChanged();
+        }
+        if (other.hasVote()) {
+          setVote(other.getVote());
+        }
+        if (other.hasExpires()) {
+          setExpires(other.getExpires());
+        }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+<<<<<<< HEAD
         if (!hasCourseId()) {
+=======
+        if (!hasNodeId()) {
+          
+          return false;
+        }
+        if (!hasBallotId()) {
+          
+          return false;
+        }
+        if (!hasDesc()) {
+          
+          return false;
+        }
+        if (!hasVote()) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           
           return false;
         }
@@ -23737,11 +26303,19 @@ public final class Comm {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
+<<<<<<< HEAD
         eye.Comm.GetCourse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (eye.Comm.GetCourse) e.getUnfinishedMessage();
+=======
+        eye.Comm.LeaderElection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (eye.Comm.LeaderElection) e.getUnfinishedMessage();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -23752,6 +26326,7 @@ public final class Comm {
       }
       private int bitField0_;
 
+<<<<<<< HEAD
       // required int32 course_id = 1;
       private int courseId_ ;
       /**
@@ -23772,19 +26347,91 @@ public final class Comm {
       public Builder setCourseId(int value) {
         bitField0_ |= 0x00000001;
         courseId_ = value;
+=======
+      // required string node_id = 1;
+      private java.lang.Object nodeId_ = "";
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public boolean hasNodeId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public java.lang.String getNodeId() {
+        java.lang.Object ref = nodeId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          nodeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNodeIdBytes() {
+        java.lang.Object ref = nodeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>required int32 course_id = 1;</code>
        */
       public Builder clearCourseId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         courseId_ = 0;
+=======
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder clearNodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nodeId_ = getDefaultInstance().getNodeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string node_id = 1;</code>
+       */
+      public Builder setNodeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        nodeId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
 
+<<<<<<< HEAD
       // optional string course_name = 2;
       private java.lang.Object courseName_ = "";
       /**
@@ -23802,63 +26449,123 @@ public final class Comm {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           courseName_ = s;
+=======
+      // required string ballot_id = 2;
+      private java.lang.Object ballotId_ = "";
+      /**
+       * <code>required string ballot_id = 2;</code>
+       */
+      public boolean hasBallotId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string ballot_id = 2;</code>
+       */
+      public java.lang.String getBallotId() {
+        java.lang.Object ref = ballotId_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          ballotId_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_name = 2;</code>
        */
       public com.google.protobuf.ByteString
           getCourseNameBytes() {
         java.lang.Object ref = courseName_;
+=======
+       * <code>required string ballot_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBallotIdBytes() {
+        java.lang.Object ref = ballotId_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
+<<<<<<< HEAD
           courseName_ = b;
+=======
+          ballotId_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_name = 2;</code>
        */
       public Builder setCourseName(
+=======
+       * <code>required string ballot_id = 2;</code>
+       */
+      public Builder setBallotId(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
+<<<<<<< HEAD
         courseName_ = value;
+=======
+        ballotId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_name = 2;</code>
        */
       public Builder clearCourseName() {
         bitField0_ = (bitField0_ & ~0x00000002);
         courseName_ = getDefaultInstance().getCourseName();
+=======
+       * <code>required string ballot_id = 2;</code>
+       */
+      public Builder clearBallotId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ballotId_ = getDefaultInstance().getBallotId();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_name = 2;</code>
        */
       public Builder setCourseNameBytes(
+=======
+       * <code>required string ballot_id = 2;</code>
+       */
+      public Builder setBallotIdBytes(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
+<<<<<<< HEAD
         courseName_ = value;
+=======
+        ballotId_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
 
+<<<<<<< HEAD
       // optional string course_description = 3;
       private java.lang.Object courseDescription_ = "";
       /**
@@ -23876,63 +26583,192 @@ public final class Comm {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           courseDescription_ = s;
+=======
+      // required string desc = 4;
+      private java.lang.Object desc_ = "";
+      /**
+       * <code>required string desc = 4;</code>
+       */
+      public boolean hasDesc() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required string desc = 4;</code>
+       */
+      public java.lang.String getDesc() {
+        java.lang.Object ref = desc_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          desc_ = s;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_description = 3;</code>
        */
       public com.google.protobuf.ByteString
           getCourseDescriptionBytes() {
         java.lang.Object ref = courseDescription_;
+=======
+       * <code>required string desc = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescBytes() {
+        java.lang.Object ref = desc_;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
+<<<<<<< HEAD
           courseDescription_ = b;
+=======
+          desc_ = b;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_description = 3;</code>
        */
       public Builder setCourseDescription(
+=======
+       * <code>required string desc = 4;</code>
+       */
+      public Builder setDesc(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
+<<<<<<< HEAD
         courseDescription_ = value;
+=======
+        desc_ = value;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_description = 3;</code>
        */
       public Builder clearCourseDescription() {
         bitField0_ = (bitField0_ & ~0x00000004);
         courseDescription_ = getDefaultInstance().getCourseDescription();
+=======
+       * <code>required string desc = 4;</code>
+       */
+      public Builder clearDesc() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        desc_ = getDefaultInstance().getDesc();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         onChanged();
         return this;
       }
       /**
+<<<<<<< HEAD
        * <code>optional string course_description = 3;</code>
        */
       public Builder setCourseDescriptionBytes(
+=======
+       * <code>required string desc = 4;</code>
+       */
+      public Builder setDescBytes(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
+<<<<<<< HEAD
         courseDescription_ = value;
+=======
+        desc_ = value;
         onChanged();
         return this;
       }
 
+      // required .LeaderElection.VoteAction vote = 5;
+      private eye.Comm.LeaderElection.VoteAction vote_ = eye.Comm.LeaderElection.VoteAction.ELECTION;
+      /**
+       * <code>required .LeaderElection.VoteAction vote = 5;</code>
+       */
+      public boolean hasVote() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required .LeaderElection.VoteAction vote = 5;</code>
+       */
+      public eye.Comm.LeaderElection.VoteAction getVote() {
+        return vote_;
+      }
+      /**
+       * <code>required .LeaderElection.VoteAction vote = 5;</code>
+       */
+      public Builder setVote(eye.Comm.LeaderElection.VoteAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        vote_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .LeaderElection.VoteAction vote = 5;</code>
+       */
+      public Builder clearVote() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        vote_ = eye.Comm.LeaderElection.VoteAction.ELECTION;
+        onChanged();
+        return this;
+      }
+
+      // optional int64 expires = 6;
+      private long expires_ ;
+      /**
+       * <code>optional int64 expires = 6;</code>
+       */
+      public boolean hasExpires() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int64 expires = 6;</code>
+       */
+      public long getExpires() {
+        return expires_;
+      }
+      /**
+       * <code>optional int64 expires = 6;</code>
+       */
+      public Builder setExpires(long value) {
+        bitField0_ |= 0x00000010;
+        expires_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 expires = 6;</code>
+       */
+      public Builder clearExpires() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        expires_ = 0L;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
+        onChanged();
+        return this;
+      }
+
+<<<<<<< HEAD
       // @@protoc_insertion_point(builder_scope:GetCourse)
     }
 
@@ -24023,6 +26859,163 @@ public final class Comm {
     }
 
     public InitVoting getDefaultInstanceForType() {
+=======
+      // @@protoc_insertion_point(builder_scope:LeaderElection)
+    }
+
+    static {
+      defaultInstance = new LeaderElection(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:LeaderElection)
+  }
+
+  public interface ManagementOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .Network graph = 1;
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    boolean hasGraph();
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    eye.Comm.Network getGraph();
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    eye.Comm.NetworkOrBuilder getGraphOrBuilder();
+
+    // optional .Heartbeat beat = 2;
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    boolean hasBeat();
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    eye.Comm.Heartbeat getBeat();
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    eye.Comm.HeartbeatOrBuilder getBeatOrBuilder();
+
+    // optional .LeaderElection election = 3;
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    boolean hasElection();
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    eye.Comm.LeaderElection getElection();
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    eye.Comm.LeaderElectionOrBuilder getElectionOrBuilder();
+
+    // optional .JobProposal job_propose = 4;
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    boolean hasJobPropose();
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    eye.Comm.JobProposal getJobPropose();
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    eye.Comm.JobProposalOrBuilder getJobProposeOrBuilder();
+
+    // optional .JobBid job_bid = 5;
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    boolean hasJobBid();
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    eye.Comm.JobBid getJobBid();
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    eye.Comm.JobBidOrBuilder getJobBidOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Management}
+   *
+   * <pre>
+   * internal communication
+   * </pre>
+   */
+  public static final class Management extends
+      com.google.protobuf.GeneratedMessage
+      implements ManagementOrBuilder {
+    // Use Management.newBuilder() to construct.
+    private Management(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Management(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Management defaultInstance;
+    public static Management getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Management getDefaultInstanceForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return defaultInstance;
     }
 
@@ -24032,7 +27025,11 @@ public final class Comm {
         getUnknownFields() {
       return this.unknownFields;
     }
+<<<<<<< HEAD
     private InitVoting(
+=======
+    private Management(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -24055,6 +27052,7 @@ public final class Comm {
               }
               break;
             }
+<<<<<<< HEAD
             case 10: {
               bitField0_ |= 0x00000001;
               votingId_ = input.readBytes();
@@ -24068,6 +27066,71 @@ public final class Comm {
             case 26: {
               bitField0_ |= 0x00000004;
               portIp_ = input.readBytes();
+=======
+            case 10: {
+              eye.Comm.Network.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = graph_.toBuilder();
+              }
+              graph_ = input.readMessage(eye.Comm.Network.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(graph_);
+                graph_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              eye.Comm.Heartbeat.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = beat_.toBuilder();
+              }
+              beat_ = input.readMessage(eye.Comm.Heartbeat.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(beat_);
+                beat_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              eye.Comm.LeaderElection.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = election_.toBuilder();
+              }
+              election_ = input.readMessage(eye.Comm.LeaderElection.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(election_);
+                election_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              eye.Comm.JobProposal.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = jobPropose_.toBuilder();
+              }
+              jobPropose_ = input.readMessage(eye.Comm.JobProposal.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jobPropose_);
+                jobPropose_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              eye.Comm.JobBid.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = jobBid_.toBuilder();
+              }
+              jobBid_ = input.readMessage(eye.Comm.JobBid.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jobBid_);
+                jobBid_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
               break;
             }
           }
@@ -24084,11 +27147,16 @@ public final class Comm {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_InitVoting_descriptor;
+=======
+      return eye.Comm.internal_static_Management_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
+<<<<<<< HEAD
       return eye.Comm.internal_static_InitVoting_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               eye.Comm.InitVoting.class, eye.Comm.InitVoting.Builder.class);
@@ -24101,15 +27169,34 @@ public final class Comm {
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return new InitVoting(input, extensionRegistry);
+=======
+      return eye.Comm.internal_static_Management_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              eye.Comm.Management.class, eye.Comm.Management.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Management> PARSER =
+        new com.google.protobuf.AbstractParser<Management>() {
+      public Management parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Management(input, extensionRegistry);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
     };
 
     @java.lang.Override
+<<<<<<< HEAD
     public com.google.protobuf.Parser<InitVoting> getParserForType() {
+=======
+    public com.google.protobuf.Parser<Management> getParserForType() {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return PARSER;
     }
 
     private int bitField0_;
+<<<<<<< HEAD
     // optional string voting_id = 1;
     public static final int VOTING_ID_FIELD_NUMBER = 1;
     private java.lang.Object votingId_;
@@ -24255,12 +27342,211 @@ public final class Comm {
       votingId_ = "";
       hostIp_ = "";
       portIp_ = "";
+=======
+    // optional .Network graph = 1;
+    public static final int GRAPH_FIELD_NUMBER = 1;
+    private eye.Comm.Network graph_;
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    public boolean hasGraph() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    public eye.Comm.Network getGraph() {
+      return graph_;
+    }
+    /**
+     * <code>optional .Network graph = 1;</code>
+     *
+     * <pre>
+     * a node joined or left the network
+     * </pre>
+     */
+    public eye.Comm.NetworkOrBuilder getGraphOrBuilder() {
+      return graph_;
+    }
+
+    // optional .Heartbeat beat = 2;
+    public static final int BEAT_FIELD_NUMBER = 2;
+    private eye.Comm.Heartbeat beat_;
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    public boolean hasBeat() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    public eye.Comm.Heartbeat getBeat() {
+      return beat_;
+    }
+    /**
+     * <code>optional .Heartbeat beat = 2;</code>
+     *
+     * <pre>
+     * status updates between adjacent nodes
+     * </pre>
+     */
+    public eye.Comm.HeartbeatOrBuilder getBeatOrBuilder() {
+      return beat_;
+    }
+
+    // optional .LeaderElection election = 3;
+    public static final int ELECTION_FIELD_NUMBER = 3;
+    private eye.Comm.LeaderElection election_;
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    public boolean hasElection() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    public eye.Comm.LeaderElection getElection() {
+      return election_;
+    }
+    /**
+     * <code>optional .LeaderElection election = 3;</code>
+     *
+     * <pre>
+     * declare an election for a new leader 
+     * </pre>
+     */
+    public eye.Comm.LeaderElectionOrBuilder getElectionOrBuilder() {
+      return election_;
+    }
+
+    // optional .JobProposal job_propose = 4;
+    public static final int JOB_PROPOSE_FIELD_NUMBER = 4;
+    private eye.Comm.JobProposal jobPropose_;
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    public boolean hasJobPropose() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    public eye.Comm.JobProposal getJobPropose() {
+      return jobPropose_;
+    }
+    /**
+     * <code>optional .JobProposal job_propose = 4;</code>
+     *
+     * <pre>
+     * job management 
+     * </pre>
+     */
+    public eye.Comm.JobProposalOrBuilder getJobProposeOrBuilder() {
+      return jobPropose_;
+    }
+
+    // optional .JobBid job_bid = 5;
+    public static final int JOB_BID_FIELD_NUMBER = 5;
+    private eye.Comm.JobBid jobBid_;
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    public boolean hasJobBid() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    public eye.Comm.JobBid getJobBid() {
+      return jobBid_;
+    }
+    /**
+     * <code>optional .JobBid job_bid = 5;</code>
+     */
+    public eye.Comm.JobBidOrBuilder getJobBidOrBuilder() {
+      return jobBid_;
+    }
+
+    private void initFields() {
+      graph_ = eye.Comm.Network.getDefaultInstance();
+      beat_ = eye.Comm.Heartbeat.getDefaultInstance();
+      election_ = eye.Comm.LeaderElection.getDefaultInstance();
+      jobPropose_ = eye.Comm.JobProposal.getDefaultInstance();
+      jobBid_ = eye.Comm.JobBid.getDefaultInstance();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
+<<<<<<< HEAD
+=======
+      if (hasGraph()) {
+        if (!getGraph().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasBeat()) {
+        if (!getBeat().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasElection()) {
+        if (!getElection().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasJobPropose()) {
+        if (!getJobPropose().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasJobBid()) {
+        if (!getJobBid().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       memoizedIsInitialized = 1;
       return true;
     }
@@ -24269,6 +27555,7 @@ public final class Comm {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+<<<<<<< HEAD
         output.writeBytes(1, getVotingIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -24276,6 +27563,21 @@ public final class Comm {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getPortIpBytes());
+=======
+        output.writeMessage(1, graph_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, beat_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, election_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, jobPropose_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, jobBid_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       getUnknownFields().writeTo(output);
     }
@@ -24288,6 +27590,7 @@ public final class Comm {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
+<<<<<<< HEAD
           .computeBytesSize(1, getVotingIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -24297,6 +27600,25 @@ public final class Comm {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getPortIpBytes());
+=======
+          .computeMessageSize(1, graph_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, beat_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, election_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, jobPropose_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, jobBid_);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -24310,53 +27632,93 @@ public final class Comm {
       return super.writeReplace();
     }
 
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
     public static eye.Comm.InitVoting parseDelimitedFrom(
+=======
+    public static eye.Comm.Management parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static eye.Comm.Management parseDelimitedFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
+<<<<<<< HEAD
     public static eye.Comm.InitVoting parseFrom(
+=======
+    public static eye.Comm.Management parseFrom(
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24365,7 +27727,11 @@ public final class Comm {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
+<<<<<<< HEAD
     public static Builder newBuilder(eye.Comm.InitVoting prototype) {
+=======
+    public static Builder newBuilder(eye.Comm.Management prototype) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -24377,6 +27743,7 @@ public final class Comm {
       return builder;
     }
     /**
+<<<<<<< HEAD
      * Protobuf type {@code InitVoting}
      */
     public static final class Builder extends
@@ -24385,16 +27752,39 @@ public final class Comm {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return eye.Comm.internal_static_InitVoting_descriptor;
+=======
+     * Protobuf type {@code Management}
+     *
+     * <pre>
+     * internal communication
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements eye.Comm.ManagementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return eye.Comm.internal_static_Management_descriptor;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_InitVoting_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 eye.Comm.InitVoting.class, eye.Comm.InitVoting.Builder.class);
       }
 
       // Construct using eye.Comm.InitVoting.newBuilder()
+=======
+        return eye.Comm.internal_static_Management_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                eye.Comm.Management.class, eye.Comm.Management.Builder.class);
+      }
+
+      // Construct using eye.Comm.Management.newBuilder()
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -24406,6 +27796,14 @@ public final class Comm {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+<<<<<<< HEAD
+=======
+          getGraphFieldBuilder();
+          getBeatFieldBuilder();
+          getElectionFieldBuilder();
+          getJobProposeFieldBuilder();
+          getJobBidFieldBuilder();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
       }
       private static Builder create() {
@@ -24414,12 +27812,45 @@ public final class Comm {
 
       public Builder clear() {
         super.clear();
+<<<<<<< HEAD
         votingId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         hostIp_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         portIp_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+=======
+        if (graphBuilder_ == null) {
+          graph_ = eye.Comm.Network.getDefaultInstance();
+        } else {
+          graphBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (beatBuilder_ == null) {
+          beat_ = eye.Comm.Heartbeat.getDefaultInstance();
+        } else {
+          beatBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (electionBuilder_ == null) {
+          election_ = eye.Comm.LeaderElection.getDefaultInstance();
+        } else {
+          electionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (jobProposeBuilder_ == null) {
+          jobPropose_ = eye.Comm.JobProposal.getDefaultInstance();
+        } else {
+          jobProposeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (jobBidBuilder_ == null) {
+          jobBid_ = eye.Comm.JobBid.getDefaultInstance();
+        } else {
+          jobBidBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return this;
       }
 
@@ -24429,6 +27860,7 @@ public final class Comm {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
+<<<<<<< HEAD
         return eye.Comm.internal_static_InitVoting_descriptor;
       }
 
@@ -24438,19 +27870,36 @@ public final class Comm {
 
       public eye.Comm.InitVoting build() {
         eye.Comm.InitVoting result = buildPartial();
+=======
+        return eye.Comm.internal_static_Management_descriptor;
+      }
+
+      public eye.Comm.Management getDefaultInstanceForType() {
+        return eye.Comm.Management.getDefaultInstance();
+      }
+
+      public eye.Comm.Management build() {
+        eye.Comm.Management result = buildPartial();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
+<<<<<<< HEAD
       public eye.Comm.InitVoting buildPartial() {
         eye.Comm.InitVoting result = new eye.Comm.InitVoting(this);
+=======
+      public eye.Comm.Management buildPartial() {
+        eye.Comm.Management result = new eye.Comm.Management(this);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
+<<<<<<< HEAD
         result.votingId_ = votingId_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
@@ -24460,20 +27909,65 @@ public final class Comm {
           to_bitField0_ |= 0x00000004;
         }
         result.portIp_ = portIp_;
+=======
+        if (graphBuilder_ == null) {
+          result.graph_ = graph_;
+        } else {
+          result.graph_ = graphBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (beatBuilder_ == null) {
+          result.beat_ = beat_;
+        } else {
+          result.beat_ = beatBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (electionBuilder_ == null) {
+          result.election_ = election_;
+        } else {
+          result.election_ = electionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (jobProposeBuilder_ == null) {
+          result.jobPropose_ = jobPropose_;
+        } else {
+          result.jobPropose_ = jobProposeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (jobBidBuilder_ == null) {
+          result.jobBid_ = jobBid_;
+        } else {
+          result.jobBid_ = jobBidBuilder_.build();
+        }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
+<<<<<<< HEAD
         if (other instanceof eye.Comm.InitVoting) {
           return mergeFrom((eye.Comm.InitVoting)other);
+=======
+        if (other instanceof eye.Comm.Management) {
+          return mergeFrom((eye.Comm.Management)other);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
+<<<<<<< HEAD
       public Builder mergeFrom(eye.Comm.InitVoting other) {
         if (other == eye.Comm.InitVoting.getDefaultInstance()) return this;
         if (other.hasVotingId()) {
@@ -24490,12 +27984,63 @@ public final class Comm {
           bitField0_ |= 0x00000004;
           portIp_ = other.portIp_;
           onChanged();
+=======
+      public Builder mergeFrom(eye.Comm.Management other) {
+        if (other == eye.Comm.Management.getDefaultInstance()) return this;
+        if (other.hasGraph()) {
+          mergeGraph(other.getGraph());
+        }
+        if (other.hasBeat()) {
+          mergeBeat(other.getBeat());
+        }
+        if (other.hasElection()) {
+          mergeElection(other.getElection());
+        }
+        if (other.hasJobPropose()) {
+          mergeJobPropose(other.getJobPropose());
+        }
+        if (other.hasJobBid()) {
+          mergeJobBid(other.getJobBid());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
+<<<<<<< HEAD
+=======
+        if (hasGraph()) {
+          if (!getGraph().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasBeat()) {
+          if (!getBeat().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasElection()) {
+          if (!getElection().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasJobPropose()) {
+          if (!getJobPropose().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasJobBid()) {
+          if (!getJobBid().isInitialized()) {
+            
+            return false;
+          }
+        }
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
         return true;
       }
 
@@ -24503,11 +28048,19 @@ public final class Comm {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
+<<<<<<< HEAD
         eye.Comm.InitVoting parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (eye.Comm.InitVoting) e.getUnfinishedMessage();
+=======
+        eye.Comm.Management parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (eye.Comm.Management) e.getUnfinishedMessage();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -24518,6 +28071,7 @@ public final class Comm {
       }
       private int bitField0_;
 
+<<<<<<< HEAD
       // optional string voting_id = 1;
       private java.lang.Object votingId_ = "";
       /**
@@ -25400,6 +28954,746 @@ public final class Comm {
     }
 
     // @@protoc_insertion_point(class_scope:FindLeader)
+=======
+      // optional .Network graph = 1;
+      private eye.Comm.Network graph_ = eye.Comm.Network.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Network, eye.Comm.Network.Builder, eye.Comm.NetworkOrBuilder> graphBuilder_;
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public boolean hasGraph() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public eye.Comm.Network getGraph() {
+        if (graphBuilder_ == null) {
+          return graph_;
+        } else {
+          return graphBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public Builder setGraph(eye.Comm.Network value) {
+        if (graphBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          graph_ = value;
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public Builder setGraph(
+          eye.Comm.Network.Builder builderForValue) {
+        if (graphBuilder_ == null) {
+          graph_ = builderForValue.build();
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public Builder mergeGraph(eye.Comm.Network value) {
+        if (graphBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              graph_ != eye.Comm.Network.getDefaultInstance()) {
+            graph_ =
+              eye.Comm.Network.newBuilder(graph_).mergeFrom(value).buildPartial();
+          } else {
+            graph_ = value;
+          }
+          onChanged();
+        } else {
+          graphBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public Builder clearGraph() {
+        if (graphBuilder_ == null) {
+          graph_ = eye.Comm.Network.getDefaultInstance();
+          onChanged();
+        } else {
+          graphBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public eye.Comm.Network.Builder getGraphBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGraphFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      public eye.Comm.NetworkOrBuilder getGraphOrBuilder() {
+        if (graphBuilder_ != null) {
+          return graphBuilder_.getMessageOrBuilder();
+        } else {
+          return graph_;
+        }
+      }
+      /**
+       * <code>optional .Network graph = 1;</code>
+       *
+       * <pre>
+       * a node joined or left the network
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Network, eye.Comm.Network.Builder, eye.Comm.NetworkOrBuilder> 
+          getGraphFieldBuilder() {
+        if (graphBuilder_ == null) {
+          graphBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.Network, eye.Comm.Network.Builder, eye.Comm.NetworkOrBuilder>(
+                  graph_,
+                  getParentForChildren(),
+                  isClean());
+          graph_ = null;
+        }
+        return graphBuilder_;
+      }
+
+      // optional .Heartbeat beat = 2;
+      private eye.Comm.Heartbeat beat_ = eye.Comm.Heartbeat.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Heartbeat, eye.Comm.Heartbeat.Builder, eye.Comm.HeartbeatOrBuilder> beatBuilder_;
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public boolean hasBeat() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public eye.Comm.Heartbeat getBeat() {
+        if (beatBuilder_ == null) {
+          return beat_;
+        } else {
+          return beatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public Builder setBeat(eye.Comm.Heartbeat value) {
+        if (beatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          beat_ = value;
+          onChanged();
+        } else {
+          beatBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public Builder setBeat(
+          eye.Comm.Heartbeat.Builder builderForValue) {
+        if (beatBuilder_ == null) {
+          beat_ = builderForValue.build();
+          onChanged();
+        } else {
+          beatBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public Builder mergeBeat(eye.Comm.Heartbeat value) {
+        if (beatBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              beat_ != eye.Comm.Heartbeat.getDefaultInstance()) {
+            beat_ =
+              eye.Comm.Heartbeat.newBuilder(beat_).mergeFrom(value).buildPartial();
+          } else {
+            beat_ = value;
+          }
+          onChanged();
+        } else {
+          beatBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public Builder clearBeat() {
+        if (beatBuilder_ == null) {
+          beat_ = eye.Comm.Heartbeat.getDefaultInstance();
+          onChanged();
+        } else {
+          beatBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public eye.Comm.Heartbeat.Builder getBeatBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBeatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      public eye.Comm.HeartbeatOrBuilder getBeatOrBuilder() {
+        if (beatBuilder_ != null) {
+          return beatBuilder_.getMessageOrBuilder();
+        } else {
+          return beat_;
+        }
+      }
+      /**
+       * <code>optional .Heartbeat beat = 2;</code>
+       *
+       * <pre>
+       * status updates between adjacent nodes
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.Heartbeat, eye.Comm.Heartbeat.Builder, eye.Comm.HeartbeatOrBuilder> 
+          getBeatFieldBuilder() {
+        if (beatBuilder_ == null) {
+          beatBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.Heartbeat, eye.Comm.Heartbeat.Builder, eye.Comm.HeartbeatOrBuilder>(
+                  beat_,
+                  getParentForChildren(),
+                  isClean());
+          beat_ = null;
+        }
+        return beatBuilder_;
+      }
+
+      // optional .LeaderElection election = 3;
+      private eye.Comm.LeaderElection election_ = eye.Comm.LeaderElection.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.LeaderElection, eye.Comm.LeaderElection.Builder, eye.Comm.LeaderElectionOrBuilder> electionBuilder_;
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public boolean hasElection() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public eye.Comm.LeaderElection getElection() {
+        if (electionBuilder_ == null) {
+          return election_;
+        } else {
+          return electionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public Builder setElection(eye.Comm.LeaderElection value) {
+        if (electionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          election_ = value;
+          onChanged();
+        } else {
+          electionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public Builder setElection(
+          eye.Comm.LeaderElection.Builder builderForValue) {
+        if (electionBuilder_ == null) {
+          election_ = builderForValue.build();
+          onChanged();
+        } else {
+          electionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public Builder mergeElection(eye.Comm.LeaderElection value) {
+        if (electionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              election_ != eye.Comm.LeaderElection.getDefaultInstance()) {
+            election_ =
+              eye.Comm.LeaderElection.newBuilder(election_).mergeFrom(value).buildPartial();
+          } else {
+            election_ = value;
+          }
+          onChanged();
+        } else {
+          electionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public Builder clearElection() {
+        if (electionBuilder_ == null) {
+          election_ = eye.Comm.LeaderElection.getDefaultInstance();
+          onChanged();
+        } else {
+          electionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public eye.Comm.LeaderElection.Builder getElectionBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getElectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      public eye.Comm.LeaderElectionOrBuilder getElectionOrBuilder() {
+        if (electionBuilder_ != null) {
+          return electionBuilder_.getMessageOrBuilder();
+        } else {
+          return election_;
+        }
+      }
+      /**
+       * <code>optional .LeaderElection election = 3;</code>
+       *
+       * <pre>
+       * declare an election for a new leader 
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.LeaderElection, eye.Comm.LeaderElection.Builder, eye.Comm.LeaderElectionOrBuilder> 
+          getElectionFieldBuilder() {
+        if (electionBuilder_ == null) {
+          electionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.LeaderElection, eye.Comm.LeaderElection.Builder, eye.Comm.LeaderElectionOrBuilder>(
+                  election_,
+                  getParentForChildren(),
+                  isClean());
+          election_ = null;
+        }
+        return electionBuilder_;
+      }
+
+      // optional .JobProposal job_propose = 4;
+      private eye.Comm.JobProposal jobPropose_ = eye.Comm.JobProposal.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobProposal, eye.Comm.JobProposal.Builder, eye.Comm.JobProposalOrBuilder> jobProposeBuilder_;
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public boolean hasJobPropose() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public eye.Comm.JobProposal getJobPropose() {
+        if (jobProposeBuilder_ == null) {
+          return jobPropose_;
+        } else {
+          return jobProposeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public Builder setJobPropose(eye.Comm.JobProposal value) {
+        if (jobProposeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobPropose_ = value;
+          onChanged();
+        } else {
+          jobProposeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public Builder setJobPropose(
+          eye.Comm.JobProposal.Builder builderForValue) {
+        if (jobProposeBuilder_ == null) {
+          jobPropose_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobProposeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public Builder mergeJobPropose(eye.Comm.JobProposal value) {
+        if (jobProposeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              jobPropose_ != eye.Comm.JobProposal.getDefaultInstance()) {
+            jobPropose_ =
+              eye.Comm.JobProposal.newBuilder(jobPropose_).mergeFrom(value).buildPartial();
+          } else {
+            jobPropose_ = value;
+          }
+          onChanged();
+        } else {
+          jobProposeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public Builder clearJobPropose() {
+        if (jobProposeBuilder_ == null) {
+          jobPropose_ = eye.Comm.JobProposal.getDefaultInstance();
+          onChanged();
+        } else {
+          jobProposeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public eye.Comm.JobProposal.Builder getJobProposeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getJobProposeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      public eye.Comm.JobProposalOrBuilder getJobProposeOrBuilder() {
+        if (jobProposeBuilder_ != null) {
+          return jobProposeBuilder_.getMessageOrBuilder();
+        } else {
+          return jobPropose_;
+        }
+      }
+      /**
+       * <code>optional .JobProposal job_propose = 4;</code>
+       *
+       * <pre>
+       * job management 
+       * </pre>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobProposal, eye.Comm.JobProposal.Builder, eye.Comm.JobProposalOrBuilder> 
+          getJobProposeFieldBuilder() {
+        if (jobProposeBuilder_ == null) {
+          jobProposeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.JobProposal, eye.Comm.JobProposal.Builder, eye.Comm.JobProposalOrBuilder>(
+                  jobPropose_,
+                  getParentForChildren(),
+                  isClean());
+          jobPropose_ = null;
+        }
+        return jobProposeBuilder_;
+      }
+
+      // optional .JobBid job_bid = 5;
+      private eye.Comm.JobBid jobBid_ = eye.Comm.JobBid.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobBid, eye.Comm.JobBid.Builder, eye.Comm.JobBidOrBuilder> jobBidBuilder_;
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public boolean hasJobBid() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public eye.Comm.JobBid getJobBid() {
+        if (jobBidBuilder_ == null) {
+          return jobBid_;
+        } else {
+          return jobBidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public Builder setJobBid(eye.Comm.JobBid value) {
+        if (jobBidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jobBid_ = value;
+          onChanged();
+        } else {
+          jobBidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public Builder setJobBid(
+          eye.Comm.JobBid.Builder builderForValue) {
+        if (jobBidBuilder_ == null) {
+          jobBid_ = builderForValue.build();
+          onChanged();
+        } else {
+          jobBidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public Builder mergeJobBid(eye.Comm.JobBid value) {
+        if (jobBidBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              jobBid_ != eye.Comm.JobBid.getDefaultInstance()) {
+            jobBid_ =
+              eye.Comm.JobBid.newBuilder(jobBid_).mergeFrom(value).buildPartial();
+          } else {
+            jobBid_ = value;
+          }
+          onChanged();
+        } else {
+          jobBidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public Builder clearJobBid() {
+        if (jobBidBuilder_ == null) {
+          jobBid_ = eye.Comm.JobBid.getDefaultInstance();
+          onChanged();
+        } else {
+          jobBidBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public eye.Comm.JobBid.Builder getJobBidBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getJobBidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      public eye.Comm.JobBidOrBuilder getJobBidOrBuilder() {
+        if (jobBidBuilder_ != null) {
+          return jobBidBuilder_.getMessageOrBuilder();
+        } else {
+          return jobBid_;
+        }
+      }
+      /**
+       * <code>optional .JobBid job_bid = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          eye.Comm.JobBid, eye.Comm.JobBid.Builder, eye.Comm.JobBidOrBuilder> 
+          getJobBidFieldBuilder() {
+        if (jobBidBuilder_ == null) {
+          jobBidBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              eye.Comm.JobBid, eye.Comm.JobBid.Builder, eye.Comm.JobBidOrBuilder>(
+                  jobBid_,
+                  getParentForChildren(),
+                  isClean());
+          jobBid_ = null;
+        }
+        return jobBidBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Management)
+    }
+
+    static {
+      defaultInstance = new Management(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Management)
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
@@ -25492,6 +29786,7 @@ public final class Comm {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Management_fieldAccessorTable;
+<<<<<<< HEAD
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_SignIn_descriptor;
   private static
@@ -25522,6 +29817,8 @@ public final class Comm {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_FindLeader_fieldAccessorTable;
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25573,6 +29870,7 @@ public final class Comm {
       "\n\004path\030\007 \003(\0132\014.RoutingPath\022\016\n\006toNode\030\010 \001",
       "(\t\022\036\n\007options\030\t \003(\0132\r.NameValueSet\"F\n\007Ro" +
       "uting\022\010\n\004PING\020\002\022\016\n\nNAMESPACES\020\003\022\010\n\004JOBS\020" +
+<<<<<<< HEAD
       "\004\022\013\n\007REPORTS\020\n\022\n\n\006MANAGE\020d\"\344\002\n\007Payload\022\023" +
       "\n\004ping\030\001 \001(\0132\005.Ping\022%\n\010space_op\030\002 \001(\0132\023." +
       "NameSpaceOperation\022\035\n\006job_op\030\003 \001(\0132\r.Job" +
@@ -25613,6 +29911,34 @@ public final class Comm {
       "\022\n\n\006NOAUTH\020f\022\020\n\014NOCONNECTION\020g\022\017\n\013NOREAC",
       "HABLE\020h\022\016\n\nNORESOURCE\020i\022\014\n\007FAILURE\020\307\001B\007\n" +
       "\003eyeH\001"
+=======
+      "\004\022\013\n\007REPORTS\020\n\022\n\n\006MANAGE\020d\"\254\001\n\007Payload\022\023" +
+      "\n\004ping\030\001 \001(\0132\005.Ping\022%\n\010space_op\030\002 \001(\0132\023." +
+      "NameSpaceOperation\022\035\n\006job_op\030\003 \001(\0132\r.Job" +
+      "Operation\022\036\n\njob_status\030\006 \001(\0132\n.JobStatu" +
+      "s\022&\n\014space_status\030\007 \001(\0132\020.NameSpaceStatu" +
+      "s\":\n\007Request\022\027\n\006header\030\001 \002(\0132\007.Header\022\026\n" +
+      "\004body\030\002 \002(\0132\010.Payload\".\n\tHeartbeat\022\017\n\007no" +
+      "de_id\030\001 \002(\t\022\020\n\010time_ref\030\002 \002(\003\"\252\001\n\007Networ",
+      "k\022\017\n\007node_id\030\001 \002(\t\022&\n\006action\030\002 \002(\0162\026.Net" +
+      "work.NetworkAction\"f\n\rNetworkAction\022\014\n\010N" +
+      "ODEJOIN\020\001\022\r\n\tNODELEAVE\020\002\022\014\n\010NODEDEAD\020\003\022\r" +
+      "\n\tCREATEMAP\0207\022\014\n\010ANNOUNCE\0208\022\r\n\010SHUTDOWN\020" +
+      "\347\007\"\330\001\n\016LeaderElection\022\017\n\007node_id\030\001 \002(\t\022\021" +
+      "\n\tballot_id\030\002 \002(\t\022\014\n\004desc\030\004 \002(\t\022(\n\004vote\030" +
+      "\005 \002(\0162\032.LeaderElection.VoteAction\022\017\n\007exp" +
+      "ires\030\006 \001(\003\"Y\n\nVoteAction\022\014\n\010ELECTION\020\001\022\014" +
+      "\n\010NOMINATE\020\002\022\013\n\007ABSTAIN\020\003\022\021\n\rDECLAREWINN" +
+      "ER\020\004\022\017\n\013DECLAREVOID\020\005\"\237\001\n\nManagement\022\027\n\005",
+      "graph\030\001 \001(\0132\010.Network\022\030\n\004beat\030\002 \001(\0132\n.He" +
+      "artbeat\022!\n\010election\030\003 \001(\0132\017.LeaderElecti" +
+      "on\022!\n\013job_propose\030\004 \001(\0132\014.JobProposal\022\030\n" +
+      "\007job_bid\030\005 \001(\0132\007.JobBid*\221\001\n\nPokeStatus\022\n" +
+      "\n\006UKNOWN\020\001\022\013\n\007SUCCESS\020\002\022\013\n\007NOFOUND\020d\022\020\n\014" +
+      "NOINCOMPLETE\020e\022\n\n\006NOAUTH\020f\022\020\n\014NOCONNECTI" +
+      "ON\020g\022\017\n\013NOREACHABLE\020h\022\016\n\nNORESOURCE\020i\022\014\n" +
+      "\007FAILURE\020\307\001B\007\n\003eyeH\001"
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -25696,7 +30022,11 @@ public final class Comm {
           internal_static_Payload_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Payload_descriptor,
+<<<<<<< HEAD
               new java.lang.String[] { "Ping", "SpaceOp", "JobOp", "SignIn", "SignUp", "ReqList", "GetCourse", "InitVoting", "FindLeader", "JobStatus", "SpaceStatus", });
+=======
+              new java.lang.String[] { "Ping", "SpaceOp", "JobOp", "JobStatus", "SpaceStatus", });
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           internal_static_Request_descriptor =
             getDescriptor().getMessageTypes().get(13);
           internal_static_Request_fieldAccessorTable = new
@@ -25727,6 +30057,7 @@ public final class Comm {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Management_descriptor,
               new java.lang.String[] { "Graph", "Beat", "Election", "JobPropose", "JobBid", });
+<<<<<<< HEAD
           internal_static_SignIn_descriptor =
             getDescriptor().getMessageTypes().get(18);
           internal_static_SignIn_fieldAccessorTable = new
@@ -25763,6 +30094,8 @@ public final class Comm {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_FindLeader_descriptor,
               new java.lang.String[] { "LeaderIp", "LeaderPort", });
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
           return null;
         }
       };

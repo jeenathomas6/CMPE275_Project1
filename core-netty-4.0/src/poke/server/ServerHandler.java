@@ -25,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+<<<<<<< HEAD
 
 
 
@@ -43,6 +44,10 @@ import poke.server.management.managers.HeartbeatManager;
 import poke.server.queue.ChannelQueue;
 import poke.server.queue.QueueFactory;
 import poke.server.resources.ResourceFactory;
+=======
+import poke.server.queue.ChannelQueue;
+import poke.server.queue.QueueFactory;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -69,6 +74,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 
 	private ChannelQueue queue;
     protected ConcurrentMap<String, Listner> listeners = new ConcurrentHashMap<String, Listner>();
+<<<<<<< HEAD
     
     private String nearestHost;
     private int nearestPort;
@@ -193,6 +199,20 @@ public class ServerHandler extends SimpleChannelInboundHandler<eye.Comm.Request>
 	
 	
 	//-->Jeena -4/6
+=======
+
+	public ServerHandler() {
+		logger.info("** ServerHandler created **");
+	}
+
+	@Override
+	public void channelRead0(ChannelHandlerContext ctx, eye.Comm.Request req) throws Exception {
+		// processing is deferred to the worker threads
+		logger.info("---> server got a message");
+		logger.info("Message received is "+req);
+		queueInstance(ctx.channel()).enqueueRequest(req, ctx.channel());
+	}
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 
     public void addListener(Listner listener) {

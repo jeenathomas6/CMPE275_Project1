@@ -18,6 +18,10 @@ package poke.demo;
 import poke.client.ClientCommand;
 import poke.client.ClientPrintListener;
 import poke.client.comm.CommListener;
+<<<<<<< HEAD
+=======
+import poke.server.PortListener;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 import poke.server.management.managers.ClientListener;
 import poke.server.management.managers.HeartbeatListener;
 
@@ -45,9 +49,15 @@ public class Jab {
 		//cc.addListener(hblistener);
 		//cc.addListener(clientListener);
 
+<<<<<<< HEAD
 		for (int i = 0; i < 1; i++) {
 			count++;
 			cc.poke(tag, 1);
+=======
+		for (int i = 0; i < 3; i++) {
+			count++;
+			cc.poke(tag, count);
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		}
 	}
 

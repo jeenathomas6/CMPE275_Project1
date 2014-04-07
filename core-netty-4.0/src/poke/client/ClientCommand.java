@@ -21,6 +21,10 @@ import org.slf4j.LoggerFactory;
 import poke.client.comm.CommConnection;
 import poke.client.comm.CommHandler;
 import poke.client.comm.CommListener;
+<<<<<<< HEAD
+=======
+import poke.server.PortListener;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 import poke.server.management.managers.ClientListener;
 import poke.server.management.managers.HeartbeatListener;
 import eye.Comm.Header;
@@ -98,6 +102,7 @@ public class ClientCommand {
 		Ping.Builder f = eye.Comm.Ping.newBuilder();
 		f.setTag(tag);
 		f.setNumber(num);
+<<<<<<< HEAD
 		
 		//-->jeena 4/6
 		eye.Comm.InitVoting.Builder iv=eye.Comm.InitVoting.newBuilder();
@@ -105,15 +110,21 @@ public class ClientCommand {
 		iv.setHostIp("host_ip");
 		iv.setPortIp("port_ip");
 		//-->jeena 4/6
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 		// payload containing data
 		Request.Builder r = Request.newBuilder();
 		eye.Comm.Payload.Builder p = Payload.newBuilder();
 		
 		p.setPing(f.build());
+<<<<<<< HEAD
 		p.setInitVoting(iv.build());
 		r.setBody(p.build());
 		
+=======
+		r.setBody(p.build());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 		// header with routing info
 		eye.Comm.Header.Builder h = Header.newBuilder();

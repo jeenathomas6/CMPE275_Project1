@@ -72,10 +72,13 @@ public class HeartbeatListener implements MonitorListener {
 			ElectionManager em=ElectionManager.getInstance();
 			em.processRequest(msg, msg.getElection());
 		}
+<<<<<<< HEAD
 		if(msg.hasJobPropose())
 		{
 			logger.info("In heart beat listener - got job proposal");
 		}
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		
 	}
 	

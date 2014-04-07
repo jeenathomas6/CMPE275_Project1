@@ -25,12 +25,19 @@ public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 	{
 		this.handler=handler;
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 	@Override
 	public void initChannel(SocketChannel ch) throws Exception {
 		ChannelPipeline pipeline = ch.pipeline();
+<<<<<<< HEAD
         logger.info("inside initChannel of ServerHandler***********************");
+=======
+        logger.info("inside initChannel***********************");
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		// Enable stream compression (you can remove these two if unnecessary)
 		if (compress) {
 			pipeline.addLast("deflater", ZlibCodecFactory.newZlibEncoder(ZlibWrapper.GZIP));
@@ -55,7 +62,10 @@ public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 		pipeline.addLast("protobufEncoder", new ProtobufEncoder());
 
 		// our server processor (new instance for each connection)
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		pipeline.addLast("handler", new ServerHandler());
 	}
 }

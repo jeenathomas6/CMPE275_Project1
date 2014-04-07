@@ -61,7 +61,11 @@ public class HeartbeatManager extends Thread {
 	boolean forever = true;
     boolean declareElection = false;
 
+<<<<<<< HEAD
 	public static ConcurrentHashMap<Channel, HeartbeatData> outgoingHB = new ConcurrentHashMap<Channel, HeartbeatData>();
+=======
+	public ConcurrentHashMap<Channel, HeartbeatData> outgoingHB = new ConcurrentHashMap<Channel, HeartbeatData>();
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 	ConcurrentHashMap<String, HeartbeatData> incomingHB = new ConcurrentHashMap<String, HeartbeatData>();
 
 	public static HeartbeatManager getInstance(String id) {
@@ -250,8 +254,12 @@ public class HeartbeatManager extends Thread {
                                 hd.setFailuresOnSend(0);
                                 if (logger.isDebugEnabled())
                                     logger.debug("beat (" + nodeId + ") sent to " + hd.getNodeId() + " at " + hd.getHost());
+<<<<<<< HEAD
                             } 
                             catch (Exception e) {
+=======
+                            } catch (Exception e) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
                                 hd.incrementFailuresOnSend();
                                 logger.error("Failed " + hd.getFailures() + " times to send HB for " + hd.getNodeId()
                                         + " at " + hd.getHost(), e);

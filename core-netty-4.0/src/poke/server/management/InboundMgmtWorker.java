@@ -89,6 +89,7 @@ public class InboundMgmtWorker extends Thread {
 					 * Incoming are connections this node establishes, which is
 					 * handled by the HeartbeatConnector.
 					 */
+<<<<<<< HEAD
                     logger.info("****Inside req.hasBeat()******");
 					HeartbeatManager.getInstance().processRequest(req.getBeat());
 				} else if (req.hasElection()) {
@@ -103,6 +104,22 @@ public class InboundMgmtWorker extends Thread {
 				} else if (req.hasJobPropose()) {
                     logger.info("*******----> Inside req.hasJobPropose() in Inbound Management Worker*******");
 					JobManager.getInstance().processRequest(req, req.getJobPropose());
+=======
+                    logger.info("Pooja -- Inside req.hasBeat()");
+					HeartbeatManager.getInstance().processRequest(req.getBeat());
+				} else if (req.hasElection()) {
+                    logger.info("Pooja -- Inside req.hasElection()");
+					ElectionManager.getInstance().processRequest(req, req.getElection());
+				} else if (req.hasGraph()) {
+                    logger.info("Pooja -- Inside req.hasGraph()");
+					NetworkManager.getInstance().processRequest(req.getGraph(), msg.channel, msg.sa);
+				} else if (req.hasJobBid()) {
+                    logger.info("Pooja -- Inside req.hasJobBid()");
+					JobManager.getInstance().processRequest(req.getJobBid());
+				} else if (req.hasJobPropose()) {
+                    logger.info("Pooja -- Inside req.hasJobPropose()");
+					JobManager.getInstance().processRequest(req.getJobPropose());
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 				} else
 					logger.error("Unknown management message");
 

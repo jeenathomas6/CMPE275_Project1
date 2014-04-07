@@ -15,12 +15,16 @@
  */
 package poke.server.management.managers;
 
+<<<<<<< HEAD
 import java.util.Random;
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 import java.util.concurrent.atomic.AtomicReference;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+<<<<<<< HEAD
 import poke.server.ServerNodeInfo;
 import poke.server.VotingConnection;
 import poke.server.conf.NodeDesc;
@@ -30,6 +34,10 @@ import poke.server.resources.ResourceFactory;
 import eye.Comm.JobBid;
 import eye.Comm.JobProposal;
 import eye.Comm.Management;
+=======
+import eye.Comm.JobBid;
+import eye.Comm.JobProposal;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 /**
  * The job manager class is used by the system to assess and vote on a job. This
@@ -44,6 +52,7 @@ public class JobManager {
 	protected static AtomicReference<JobManager> instance = new AtomicReference<JobManager>();
 
 	private String nodeId;
+<<<<<<< HEAD
 	
 	ServerConf conf;
     VotingConnection vc;
@@ -51,6 +60,10 @@ public class JobManager {
 
 	public static JobManager getInstance(String id) {
 		
+=======
+
+	public static JobManager getInstance(String id) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 		instance.compareAndSet(null, new JobManager(id));
 		return instance.get();
 	}
@@ -61,6 +74,7 @@ public class JobManager {
 
 	public JobManager(String nodeId) {
 		this.nodeId = nodeId;
+<<<<<<< HEAD
 		this.conf = ResourceFactory.cfg;
 		//conf.getServer().getProperty(name)
 	}
@@ -86,6 +100,18 @@ public class JobManager {
 		//forward to nearest node 
 		
 		forwardJobBid (jobBid);
+=======
+	}
+
+	/**
+	 * a new job proposal has been sent out that I need to evaluate if I can run
+	 * it
+	 * 
+	 * @param req
+	 *            The proposal
+	 */
+	public void processRequest(JobProposal req) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 
 	}
 
@@ -95,6 +121,7 @@ public class JobManager {
 	 * @param req
 	 *            The bid
 	 */
+<<<<<<< HEAD
 	public void processRequest(Management mgmtReq, JobBid req) {
 		
 		logger.info("Job bid process request");
@@ -162,5 +189,8 @@ public class JobManager {
 			e.printStackTrace();
 		}
 		
+=======
+	public void processRequest(JobBid req) {
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 	}
 }

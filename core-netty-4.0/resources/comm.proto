@@ -161,12 +161,15 @@ message Header {
     required string originator = 2;
     optional string tag = 3;
     optional int64 time = 4;
+<<<<<<< HEAD
     // Identify the request at server with these tags(please maintain these across all teams):
     // SignIn
     // SignUp
     // CourseList
     // SearchCourse
     // Voting	
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     
     // while we can use extensions, it is not a clean inheritance 
     // implementation and since requests and responses differ only 
@@ -193,6 +196,15 @@ message Header {
         }
 }
 
+<<<<<<< HEAD
+=======
+message JeenaMsg
+{
+optional string desc=1;
+
+}
+
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 // these are commands from external clients
 message Payload {
     // requests & replies
@@ -201,12 +213,16 @@ message Payload {
     // requests only
     optional NameSpaceOperation space_op = 2;
     optional JobOperation job_op = 3;
+<<<<<<< HEAD
     optional SignIn sign_in=8;
     optional SignUp sign_up=9;
     optional RequestList req_list=10;
     optional GetCourse get_course=11;
     optional InitVoting init_voting=12;
     optional FindLeader find_leader=14;
+=======
+
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
     // replies only
     optional JobStatus job_status = 6;
     optional NameSpaceStatus space_status = 7;
@@ -216,8 +232,13 @@ message Payload {
 }
 
 message Request {
+<<<<<<< HEAD
     required Header header = 1;
     required Payload body = 2;
+=======
+    optional Header header = 1;
+    optional Payload body = 2;
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
 }
 
 message Heartbeat {
@@ -270,6 +291,7 @@ message Management {
    optional JobProposal job_propose = 4;
    optional JobBid job_bid = 5;
 }	
+<<<<<<< HEAD
 
 //Course Listing Format..
 message SignIn{
@@ -304,3 +326,5 @@ optional string leader_ip=1;
 optional string leader_port=2;
 }
 
+=======
+>>>>>>> 16cb6562cc02ef3108b1149670403bb03d2d94d9
